@@ -17,17 +17,18 @@ set :log_level, :info
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :linked_dirs, %w(bin log tmp/pids tmp/cache tmp/sockets vendor/bundle
+                     public/system public/uploads)
 
-set :default_env, { path: "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH" }
+set :default_env, path: '$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH'
 set :keep_releases, 5
-set :linked_dirs, fetch(:linked_dirs) + %w{public/system public/uploads}
+set :linked_dirs, fetch(:linked_dirs) + %w(public/system public/uploads)
 
-#set :normalize_asset_timestamps, false
-set :normalize_asset_timestamps, %{public/images public/javascripts public/stylesheets}
+# set :normalize_asset_timestamps, false
+set :normalize_asset_timestamps, %(public/images public/javascripts
+  public/stylesheets)
 
 namespace :deploy do
-
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
@@ -46,5 +47,5 @@ namespace :deploy do
     end
   end
 
-  after "deploy", "deploy:migrate"
+  after 'deploy', 'deploy:migrate'
 end
