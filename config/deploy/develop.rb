@@ -6,9 +6,9 @@ set :stage, :develop
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '188.166.25.244:2508', user: 'deploy', roles: %w{web app db}
+server '188.166.25.244:2508', user: 'deploy', roles: %w(web app db)
 
-set :deploy_to, "/home/deploy/railsapps/seriousgamemaster/develop"
+set :deploy_to, '/home/deploy/railsapps/seriousgamemaster/develop'
 
 set :rails_env, 'development'
 set :branch, 'develop'
