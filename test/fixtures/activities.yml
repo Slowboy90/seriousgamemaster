@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  learning_objective_id: 1
+  context: MyText
+
+two:
+  description: MyText
+  learning_objective_id: 1
+  context: MyText
