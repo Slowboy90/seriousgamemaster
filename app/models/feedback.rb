@@ -1,4 +1,4 @@
 class Feedback < ActiveRecord::Base
-  belongs to :user
-  belongs to :learning_objective
+  belongs_to :user
+  belongs_to :learning_objective
 end
