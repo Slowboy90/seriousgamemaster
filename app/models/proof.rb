@@ -1,4 +1,3 @@
 class Proof < ActiveRecord::Base
-  belongs to :activity 
-
+  belongs_to :activity
 end
