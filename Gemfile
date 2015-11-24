@@ -55,4 +55,7 @@ group :development do
 
   # rubocop
   gem 'rubocop', require: false
+
+  # devise
+  gem 'devise'
 end
