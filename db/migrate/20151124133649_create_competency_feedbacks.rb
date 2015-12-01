@@ -1,3 +1,4 @@
+# create competencyfeedback class
 class CreateCompetencyFeedbacks < ActiveRecord::Migration
   def change
     create_table :competency_feedbacks do |t|
