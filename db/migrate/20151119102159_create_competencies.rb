@@ -1,3 +1,4 @@
+# create competencies class
 class CreateCompetencies < ActiveRecord::Migration
   def change
     create_table :competencies do |t|
