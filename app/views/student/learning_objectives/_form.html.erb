@@ -1,0 +1,28 @@
+    <%= form_for [:student, @learning_objective] do |lo| %>
+      <p>
+        <%= lo.label 'Omschrijving' %><br>
+        <%= lo.text_field :name %>
+      </p>
+
+      <p>
+        <%= lo.label 'Competentie' %><br>
+        <%= lo.collection_select(:competency_id, Competency.all, :id, :name) %>
+      </p>
+     
+      <p>
+        <%= lo.label 'Leerjaar' %><br>
+        <%= lo.number_field :academic_year %>
+      </p>
+
+      <p>
+        <%= lo.label 'Semester' %><br>
+        <%= lo.number_field :period %>
+      </p>
+     
+      <p>
+        <%= lo.submit 'Bevestig' %>
+      </p>
+    <% end %>
+
+
+  
