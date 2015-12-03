@@ -17,6 +17,9 @@ index page learning objective
       <td><%= lo.achieved %></td>
       <td><%= link_to 'Show', student_learning_objective_path(lo) %></td>      
       <td><%= link_to 'Leerdoel aanpassen', edit_student_learning_objective_path(lo) %></td>
+      <td><%= link_to 'Leerdoel verwijderen'
+        , student_learning_objective_path(lo)
+          , method: :delete, data: { confirm: "Weet je het zeker?" } %></td>
     </tr>
   <% end %>
 </table>

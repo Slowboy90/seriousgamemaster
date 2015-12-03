@@ -42,7 +42,7 @@ class Student::LearningObjectivesController < ApplicationController
   def destroy
     @learning_objective = LearningObjective.find(params[:id])
     @learning_objective.destroy
-    
+    redirect_to student_root_path, notice: "Leerdoel succesvol verwijderd"
   end
 
   private
