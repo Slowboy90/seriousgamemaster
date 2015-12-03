@@ -1,1 +1,24 @@
 index page learning objective
+<table>
+  <tr>
+    <th>Naam</th>
+    <th>Competentie</th>
+    <th>Leerjaar</th>
+    <th>Semester</th>
+    <th>Behaald?</th>
+  </tr>
+
+  <% @learning_objectives.each do |lo| %>
+    <tr>
+      <td><%= lo.name %></td>
+      <td><%= lo.competency_id %></td>
+      <td><%= lo.academic_year %></td>
+      <td><%= lo.period %></td>
+      <td><%= lo.achieved %></td>
+      <td><%= link_to 'Show', student_learning_objective_path(lo) %></td>      
+
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Nieuw', new_student_learning_objective_path %>

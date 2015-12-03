@@ -1,0 +1,25 @@
+    <%= form_for @learning_objective, url: student_root_path do |lo| %>
+      <p>
+        <%= lo.label 'Omschrijving' %><br>
+        <%= lo.text_field :name %>
+      </p>
+
+      <p>
+        <%= lo.label 'Competentie' %><br>
+        <%= lo.number_field :competency_id %>
+      </p>
+     
+      <p>
+        <%= lo.label 'Leerjaar' %><br>
+        <%= lo.number_field :academic_year %>
+      </p>
+
+      <p>
+        <%= lo.label 'Semester' %><br>
+        <%= lo.number_field :period %>
+      </p>
+     
+      <p>
+        <%= lo.submit 'Maak leerdoel aan' %>
+      </p>
+    <% end %>
