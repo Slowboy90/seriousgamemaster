@@ -30,14 +30,20 @@ class Student::LearningObjectivesController < ApplicationController
   def update
     @learning_objective = LearningObjective.find(params[:id])
 
-      if @learning_objective.update(learning_objective_params)
+    if @learning_objective.update(learning_objective_params)
 
-        redirect_to student_root_path, notice: "Leerdoel succesvol aangepast"
+       redirect_to student_root_path, notice: "Leerdoel succesvol aangepast"
 
-      else 
-        render "edit"
-      end
+    else
+      render "edit"
     end
+  end
+
+  def destroy
+    @learning_objective = LearningObjective.find(params[:id])
+    @learning_objective.destroy
+    
+  end
 
   private
 

@@ -11,7 +11,7 @@ index page learning objective
   <% @learning_objectives.each do |lo| %>
     <tr>
       <td><%= lo.name %></td>
-      <td><%= lo.competency_id %></td>
+      <td><%= lo.competency.name unless lo.competency.nil? %></td>
       <td><%= lo.academic_year %></td>
       <td><%= lo.period %></td>
       <td><%= lo.achieved %></td>
@@ -22,3 +22,4 @@ index page learning objective
 </table>
 
 <%= link_to 'Nieuw', new_student_learning_objective_path %>
+

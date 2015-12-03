@@ -6,7 +6,7 @@
 
       <p>
         <%= lo.label 'Competentie' %><br>
-        <%= lo.number_field :competency_id %>
+        <%= lo.collection_select(:competency_id, Competency.all, :id, :name) %>
       </p>
      
       <p>
@@ -23,3 +23,6 @@
         <%= lo.submit 'Verstuur!' %>
       </p>
     <% end %>
+
+
+  
