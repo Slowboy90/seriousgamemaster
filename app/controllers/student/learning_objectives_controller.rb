@@ -14,6 +14,7 @@ class Student::LearningObjectivesController < ApplicationController
 
   def create
     @learning_objective = LearningObjective.new(learning_objective_params)
+    @learning_objective.user_id = current_user.id
 
     if @learning_objective.save
       redirect_to student_root_path, :notice => "Leerdoel succesvol aangemaakt"
@@ -21,6 +22,22 @@ class Student::LearningObjectivesController < ApplicationController
       render "new"
     end
   end
+
+  def edit
+    @learning_objective = LearningObjective.find(params[:id])
+  end
+
+  def update
+    @learning_objective = LearningObjective.find(params[:id])
+
+      if @learning_objective.update(learning_objective_params)
+
+        redirect_to student_root_path, notice: "Leerdoel succesvol aangepast"
+
+      else 
+        render "edit"
+      end
+    end
 
   private
 

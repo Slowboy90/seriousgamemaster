@@ -16,7 +16,7 @@ index page learning objective
       <td><%= lo.period %></td>
       <td><%= lo.achieved %></td>
       <td><%= link_to 'Show', student_learning_objective_path(lo) %></td>      
-
+      <td><%= link_to 'Leerdoel aanpassen', edit_student_learning_objective_path(lo) %></td>
     </tr>
   <% end %>
 </table>
