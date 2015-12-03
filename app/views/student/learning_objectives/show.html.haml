@@ -1,0 +1,14 @@
+%table
+  %tr
+    %th Naam
+    %th Competentie
+    %th Leerjaar
+    %th Semester
+    %th Behaald?
+  %tr
+    %td= @learning_objective.name
+    %td= @learning_objective.competency.name
+    %td= @learning_objective.academic_year
+    %td= @learning_objective.period
+    %td= @learning_objective.achieved
+= link_to 'Back', student_root_path

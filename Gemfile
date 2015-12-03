@@ -58,4 +58,8 @@ group :development do
 
   # devise
   gem 'devise'
+
+  # haml gems
+  gem 'haml'
+  gem 'haml-rails'
 end
