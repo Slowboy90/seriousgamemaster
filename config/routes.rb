@@ -37,7 +37,9 @@ Rails.application.routes.draw do
     namespace :teacher, constraints: TeacherConstraint.new do
     end
 
-    namespace :admins, constraints: AdminConstraint.new do
+    namespace :admin, constraints: AdminConstraint.new do
+      root 'competencies#index'
+      resources :competencies
     end
   end
   
