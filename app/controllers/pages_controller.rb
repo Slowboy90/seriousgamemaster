@@ -10,7 +10,7 @@ class PagesController < ApplicationController
       when 2
         redirect_to student_root_path
       when 3
-        redirect_to student_root_path
+        redirect_to admin_root_path
       end
     else
       redirect_to new_user_session_path

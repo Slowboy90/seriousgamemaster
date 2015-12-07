@@ -17,7 +17,7 @@ class Student::LearningObjectivesController < ApplicationController
     @learning_objective.user_id = current_user.id
 
     if @learning_objective.save
-      redirect_to student_root_path, :notice => "Leerdoel succesvol aangemaakt"
+      redirect_to student_root_path, notice:  "Leerdoel succesvol aangemaakt"
     else
       render "new"
     end
