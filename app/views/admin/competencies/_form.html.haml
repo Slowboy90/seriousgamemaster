@@ -1,0 +1,17 @@
+= form_for [:admin, @competency] do |co|
+  %p
+    = co.label 'Naam Competentie'
+    %br
+      = co.text_field :name
+  %p
+    = co.label 'Omschrijving Competentie'
+    %br
+      = co.text_field :description
+  %p
+    = co.label 'Is de competentie actief?'
+    %br
+    
+      = co.check_box :active, as: :boolean 
+
+  %p
+    = co.submit 'Bevestig'
