@@ -1,4 +1,4 @@
-index page learning objective
+Leerdoelen
 %table
   %tr
     %th Naam
@@ -17,4 +17,5 @@ index page learning objective
       %td= link_to 'Leerdoel aanpassen', edit_student_learning_objective_path(lo)
       %td= link_to 'Leerdoel verwijderen', student_learning_objective_path(lo), method: :delete, data: { confirm: 'Weet je het zeker?' }
 = link_to 'Nieuw', new_student_learning_objective_path
-= link_to 'Log uit', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
+= link_to 'Terug naar Dashboard', student_root_path
+= link_to 'Log uit', destroy_user_session_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
