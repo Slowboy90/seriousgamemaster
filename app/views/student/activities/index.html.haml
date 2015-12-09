@@ -5,7 +5,7 @@ Leerdoelen
   - @activity.each do |ac|
     %tr
       %td= ac.description
-      -# %td= link_to 'Show', student_learning_objective_path(lo)
+      %td= link_to 'Show', student_learning_objective_activity_path(@learning_objective, ac)
       -# %td= link_to 'Leerdoel aanpassen', edit_student_learning_objective_path(lo)
       -# %td= link_to 'Leerdoel verwijderen', student_learning_objective_path(lo), method: :delete, data: { confirm: 'Weet je het zeker?' }
 = link_to 'Nieuw', new_student_learning_objective_path
