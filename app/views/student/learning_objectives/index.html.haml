@@ -16,6 +16,7 @@ Leerdoelen
       %td= link_to 'Show', student_learning_objective_path(lo)
       %td= link_to 'Leerdoel aanpassen', edit_student_learning_objective_path(lo)
       %td= link_to 'Leerdoel verwijderen', student_learning_objective_path(lo), method: :delete, data: { confirm: 'Weet je het zeker?' }
+      %td= link_to 'Activiteit toevoegen', student_learning_objective_activities_path(lo)
 = link_to 'Nieuw', new_student_learning_objective_path
 = link_to 'Terug naar Dashboard', student_root_path
 = link_to 'Log uit', destroy_user_session_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
