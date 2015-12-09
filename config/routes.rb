@@ -31,8 +31,9 @@ Rails.application.routes.draw do
 
     namespace :student, constraints: StudentConstraint.new do
       root 'dashboard#index'
-      resources :learning_objectives
-      resources :activity
+      resources :learning_objectives do
+        resources :activities
+      end
     end
 
     namespace :teacher, constraints: TeacherConstraint.new do

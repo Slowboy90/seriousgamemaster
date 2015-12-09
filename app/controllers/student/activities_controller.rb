@@ -1,10 +1,12 @@
 class Student::ActivitiesController < ApplicationController
+  before_action { @learning_objective = params[:learning_objective_id] }
   def index
-    @activity = Activity.all
+    @activity = LearningObjective.find(@learning_objective).activities.all
   end
 
   def show
     @activity = Activity.find(params[:id])
+  end
 
   def create
     @activity = Activity.new(activity_params)
@@ -16,11 +18,10 @@ class Student::ActivitiesController < ApplicationController
     end
   end
 
-
-	private
+  private
 
   def activity_params
     params.require(:activity)
-      .permit(:name, :description,)
+      .permit(:description)
   end
 end
