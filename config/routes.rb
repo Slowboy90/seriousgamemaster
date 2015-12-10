@@ -42,6 +42,7 @@ Rails.application.routes.draw do
     namespace :admin, constraints: AdminConstraint.new do
       root 'competencies#index'
       resources :competencies
+      resources :user
     end
   end
   

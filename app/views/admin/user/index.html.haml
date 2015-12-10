@@ -1,0 +1,36 @@
+
+/ @student.each do |variable|
+/ 	variable.name
+/ end
+/ @teacher.each do |variable|
+/ 	variable.name
+/ end
+/ @admin.each do |variable|
+/ 	variable.name
+/ end
+Alle studenten
+%table
+  %tr
+    %th Student naam
+    %th Student email 
+    %th Tellen
+  = @student.count
+  - @student.each do |st|
+    %tr
+      %td= st.education_name
+      %td= st.email
+      %td= @student.count
+
+
+Alle docenten
+%table
+  %tr
+    %th Docent naam
+    %th Docent email 
+    %th Tellen
+  = @teacher.count
+  - @teacher.each do |te|
+    %tr
+      %td= te.education_name
+      %td= te.email
+      %td= @teacher.count
