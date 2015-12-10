@@ -1,0 +1,12 @@
+Activiteiten
+%table
+  %tr
+    %th Beschrijving 
+  - @activity.each do |ac|
+    %tr
+      %td= ac.description
+      %td= link_to 'Show', student_learning_objective_activity_path(ac.learning_objective, ac)
+      %td= link_to 'Activiteit aanpassen', edit_student_learning_objective_activity_path(ac.learning_objective, ac)
+      %td= link_to 'Activiteit verwijderen', student_learning_objective_activity_path(ac.learning_objective, ac), method: :delete, data: { confirm: 'Weet je het zeker?' }
+= link_to 'Nieuw', new_student_learning_objective_activity_path
+= link_to 'Terug naar Dashboard', student_root_path

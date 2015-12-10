@@ -17,7 +17,7 @@ class Student::LearningObjectivesController < ApplicationController
     @learning_objective.user_id = current_user.id
 
     if @learning_objective.save
-      redirect_to student_root_path, notice:  "Leerdoel succesvol aangemaakt"
+      redirect_to student_learning_objectives_path, notice:  "Leerdoel succesvol aangemaakt"
     else
       render "new"
     end
@@ -42,7 +42,7 @@ class Student::LearningObjectivesController < ApplicationController
   def destroy
     @learning_objective = LearningObjective.find(params[:id])
     @learning_objective.destroy
-    redirect_to student_root_path, notice: "Leerdoel succesvol verwijderd"
+    redirect_to student_learning_objectives_path, notice: "Leerdoel succesvol verwijderd"
   end
 
   private
