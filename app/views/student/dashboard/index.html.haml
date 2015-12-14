@@ -1,9 +1,12 @@
-Dashboard Student
-%table
-  %tr
-    %th Competentie
-  - @competency.each do |c|
-    %tr
-      %td= link_to c.name, student_competency_path(c)
--# = link_to 'Nieuw', new_student_learning_objective_activity_path
--# = link_to 'Terug naar Dashboard', student_root_path
+#top
+  .top-items
+    %h2 Dashboard van <%= @username %>
+#sections
+  %ul
+    %h2 Competentie
+    - @competency.each do |c|
+      %li{class: "#{calculate_color(c.name)} competenties"}
+        = link_to c.name, student_competency_path(c)
+
+  = link_to 'Nieuw', new_student_competency_learning_objective_path(@competency)
+  = link_to 'Terug naar Dashboard', student_root_path

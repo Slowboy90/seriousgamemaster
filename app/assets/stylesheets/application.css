@@ -13,3 +13,296 @@
  *= require_tree .
  *= require_self
  */
+/* FONT IMPORT */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+/* END FONT IMPORT*/
+
+/* CSS RESET! */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END CSS RESET! */
+
+/* BASIC SETTINGS */
+body{
+    font-family: "Ubuntu";
+    color: black;
+}
+
+p {
+	padding: 10px;
+	font-size: 14px;
+	color: #445A64;
+}
+
+h2 {
+	padding-left: 10px;
+	font-weight: medium;
+	font-size: 20px;
+	color: #455A64;
+}
+
+h3 {
+	color:white;
+	font-size: 20px;
+}
+
+h6 {
+	font-weight: thin;
+	font-size: 16px;
+	color: #455A64;
+}
+
+/* END BASIC SETTINGS */
+
+/* FRAMEWORK SETTINGS */
+.button-wrapper{
+	display: inline-block;
+	width: 100%;
+	color: white;
+	background-color: #607D8D;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+}
+
+/* END FRAMEWORK SETTINGS */
+
+/* DESKTOP FRAMEWORK SETTINGS */
+#wrapper{	 
+	min-width:1130px;
+}
+
+.wrapper-items{
+	max-width: 1200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+/* END DESKTOP FRAMEWORK SETTINGS */
+
+/* TOP ITEMS */
+#top {
+	display: inline-block;
+	width: 100%;
+	background-color: #03A9F4;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 16px;
+}
+
+.top-items{
+	max-width: 1200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* END TOP ITEMS */
+
+/* LINK SETTINGS */
+a.home{
+	color:white;
+	font-size: 21px;
+}
+
+a.home:hover{
+	color:white;
+}
+
+a{
+	color: #607D8D;
+	text-decoration: none;
+}
+
+/* 	END LINK SETTINGS */
+
+/* SECTIONS */
+#toevoegen {
+	position: relative;
+	display: block;
+}
+
+#leerdoelen {
+	position: relative;
+	display: block;
+}
+/* END SECTIONS */
+
+/* BLOKJES */
+#create a.li{
+	width: 260px;
+	height: 60px;
+	margin: 10px;
+	background-color: #B3E5FC;
+	list-style-type: none;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+#create a.li:hover {
+	background-color: #03A9F4;
+}
+
+.default-color {
+	background-color: #B3E5FC;
+}
+.competenties {
+	width: 260px;
+	height: 100px;
+	margin: 10px;
+	list-style-type: none;
+	display: inline-block;
+	border-radius: 5px;
+	color: #445A64;
+}
+
+.design_experience {
+	background-color: #FFE0B2;
+}
+.design_experience:hover {
+	background-color: orange;
+}
+
+.implementation_integration {
+	background-color: #C8E6C9;
+}
+
+.implementation_integration:hover {
+	background-color: green;
+}
+
+.research_innovation {
+	background-color: #C5CAE9;
+}
+
+.research_innovation:hover {
+	background-color: #607D8D;
+}
+
+.projectmanagement_leadership {
+	background-color: #E1BEE7;
+}
+.projectmanagement_leadership:hover {
+	background-color: purple;
+}
+
+.communication_sharing {
+	background-color: #FFCDD2;
+}
+.communication_sharing:hover {
+	background-color: pink;
+}
+
+.growth_reflection {
+	background-color: #FFF9C4;
+}
+
+.growth_reflection:hover {
+	background-color: yellow;
+}
+
+#competenties2 a.li {
+	width: 260px;
+	height: 100px;
+	margin: 10px;
+	background-color: #B3E5FC;
+	list-style-type: none;
+	display: inline-block;
+	border-radius: 5px;
+}
+/* END BLOKJES */
+
+/* DESKTOP HEADER ITEMS */
+._1{
+	background-color: #455A64;
+	width: 250px;
+	padding: 10px;
+	display: inline-block;
+	float: left;
+	border-radius: 5px;
+}
+
+._2{
+	padding: 2px;
+	display: inline-block;
+	float: left;
+	margin-left: 22%;
+	margin-right: 10%;
+}
+
+._3{
+	background-color: #455A64;
+	border-radius: 5px 0px 0px 5px;
+	width: 250px;
+	padding: 10px;
+	display: inline-block;
+	float: left;
+}
+
+._4{
+	background-color: #CFD8DC;
+	border-radius: 0px 5px 5px 0px;
+	width: 80px;
+	padding: 10px;
+	display: inline-block;
+}
+
+/* END HEADER ITEMS */
+
+/* DESKTOP BLOCKS */
+#sections {
+	width: 1200px;
+	margin: auto;
+	padding-top: 10px;
+}
+
+/* END DESKTOP BLOCKS */
