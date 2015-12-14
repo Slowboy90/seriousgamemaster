@@ -27,12 +27,12 @@ Rails.application.routes.draw do
 
   authenticated :user do
 
-    
-
     namespace :student, constraints: StudentConstraint.new do
       root 'dashboard#index'
-      resources :learning_objectives do
-        resources :activities
+      resources :competencies do
+        resources :learning_objectives do
+          resources :activities
+        end
       end
     end
 
