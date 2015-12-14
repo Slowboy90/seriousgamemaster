@@ -1,5 +1,6 @@
 # class learning objective
 class Student::LearningObjectivesController < ApplicationController
+  before_action { @competency_id = params[:competency_id] }
   def index
     @learning_objectives = current_user.learning_objectives.all
   end
@@ -17,9 +18,9 @@ class Student::LearningObjectivesController < ApplicationController
     @learning_objective.user_id = current_user.id
 
     if @learning_objective.save
-      redirect_to student_learning_objectives_path, notice:  "Leerdoel succesvol aangemaakt"
+      redirect_to student_learning_objectives_path, notice:  'Leerdoel succesvol aangemaakt'
     else
-      render "new"
+      render 'new'
     end
   end
 
@@ -32,17 +33,17 @@ class Student::LearningObjectivesController < ApplicationController
 
     if @learning_objective.update(learning_objective_params)
 
-       redirect_to student_root_path, notice: "Leerdoel succesvol aangepast"
+      redirect_to student_root_path, notice: 'Leerdoel succesvol aangepast'
 
     else
-      render "edit"
+      render 'edit'
     end
   end
 
   def destroy
     @learning_objective = LearningObjective.find(params[:id])
     @learning_objective.destroy
-    redirect_to student_learning_objectives_path, notice: "Leerdoel succesvol verwijderd"
+    redirect_to student_learning_objectives_path, notice: 'Leerdoel succesvol verwijderd'
   end
 
   private

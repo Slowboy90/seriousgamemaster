@@ -26,7 +26,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   authenticated :user do
-
     namespace :student, constraints: StudentConstraint.new do
       root 'dashboard#index'
       resources :competencies do
@@ -44,7 +43,7 @@ Rails.application.routes.draw do
       resources :competencies
     end
   end
-  
+
   root 'pages#root'
   get 'home/index'
 end

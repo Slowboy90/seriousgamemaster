@@ -11,14 +11,14 @@ class Student::ActivitiesController < ApplicationController
   def new
     @activity = Activity.new
   end
-  
+
   def create
     @activity = LearningObjective.find(@learning_objective).activities.new(activity_params)
 
     if @activity.save
       redirect_to student_learning_objective_activities_path(@learning_objective), notice: 'Activiteit succesvol aangemaakt'
     else
-      render "new"
+      render 'new'
     end
   end
 
@@ -32,16 +32,15 @@ class Student::ActivitiesController < ApplicationController
     if @activity.update(activity_params)
       redirect_to student_learning_objective_activities_path(@learning_objective), notice: 'Activiteit succesvol aangepast'
     else
-      render "edit"
+      render 'edit'
     end
   end
 
-    def destroy
+  def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-    redirect_to student_learning_objective_activities_path(@learning_objective), notice: "Activiteit succesvol verwijderd"
-  end
-
+    redirect_to student_learning_objective_activities_path(@learning_objective), notice: 'Activiteit succesvol verwijderd'
+end
 
   private
 
