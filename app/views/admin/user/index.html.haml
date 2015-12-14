@@ -13,7 +13,6 @@ Alle studenten
   %tr
     %th Student naam
     %th Student email 
-    %th Tellen
   = @student.count
   - @student.each do |st|
     %tr
@@ -27,10 +26,10 @@ Alle docenten
   %tr
     %th Docent naam
     %th Docent email 
-    %th Tellen
   = @teacher.count
   - @teacher.each do |te|
     %tr
       %td= te.education_name
       %td= te.email
-      %td= @teacher.count
+
+= link_to 'Terug naar Admin Dashboard', admin_root_path
