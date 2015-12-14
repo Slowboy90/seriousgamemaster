@@ -1,4 +1,4 @@
-# class competencies controller 
+# class competencies controller
 class Admin::CompetenciesController < ApplicationController
   
   def index
@@ -41,7 +41,7 @@ class Admin::CompetenciesController < ApplicationController
   end
 
 
- def destroy
+  def destroy
     @competency = Competency.find(params[:id])
     @competency.destroy
     redirect_to admin_root_path, notice: 'Competentie succesvol verwijderd'
