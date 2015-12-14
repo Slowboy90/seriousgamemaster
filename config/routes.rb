@@ -40,8 +40,9 @@ Rails.application.routes.draw do
     end
 
     namespace :admin, constraints: AdminConstraint.new do
-      root 'competencies#index'
+      root 'dashboard#index'
       resources :competencies
+      resources :user
     end
   end
   
