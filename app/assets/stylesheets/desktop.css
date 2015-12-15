@@ -1,0 +1,100 @@
+@media (min-width: 1130px) and (max-width: 10000px) {
+
+/* DESKTOP FRAMEWORK SETTINGS */
+#wrapper{	 
+	min-width:1130px;
+}
+
+.wrapper-items{
+	max-width: 1200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+/* END DESKTOP FRAMEWORK SETTINGS */
+
+/* DESKTOP HEADER ITEMS */
+._1{
+	background-color: #455A64;
+	width: 250px;
+	padding: 10px;
+	display: inline-block;
+	float: left;
+	border-radius: 5px;
+}
+
+._2{
+	padding: 2px;
+	display: inline-block;
+	float: left;
+	margin-left: 22%;
+	margin-right: 10%;
+}
+
+._3{
+	background-color: #455A64;
+	border-radius: 5px 0px 0px 5px;
+	width: 250px;
+	padding: 10px;
+	display: inline-block;
+	float: left;
+}
+
+._4{
+	background-color: #CFD8DC;
+	border-radius: 0px 5px 5px 0px;
+	width: 80px;
+	padding: 10px;
+	display: inline-block;
+}
+
+/* END HEADER ITEMS */
+
+/* DESKTOP BLOCKS */
+#sections {
+	width: 1200px;
+	margin: auto;
+	padding-top: 10px;
+}
+
+/* END DESKTOP BLOCKS */
+
+/* Growth_reflection page CSS */
+
+/* BLOCKS COMPETENCY OVERVIEW*/
+
+#top_growth_reflection{
+	display: inline-block;
+	width: 100%;
+	background-color: #bfff00;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 16px;
+}
+
+.overzicht{
+	width:22%;
+	display:inline-block;
+	vertical-align:top;
+	padding: 5px;
+}
+
+#overzicht a.li {
+	width: 100%;
+	height: 100px;
+	list-style-type: none;
+	display: inline-block;
+	border-radius: 5px;
+	color: #445A64;
+	background-color: #bfff00;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding:5px;
+}
+
+#overzicht a.li:hover{
+	background-color: orange;
+}
+
+/* END BLOCKS COMPETENCY OVERVIEW*/
