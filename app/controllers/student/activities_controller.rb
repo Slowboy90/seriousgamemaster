@@ -1,7 +1,6 @@
 class Student::ActivitiesController < ApplicationController
-  before_action { @learning_objective = params[:learning_objective_id] }
   def index
-    @activity = LearningObjective.find(@learning_objective).activities.all
+    @activity = LearningObjective.find(params[:learning_objective_id]).activities.all
   end
 
   def show
@@ -9,6 +8,7 @@ class Student::ActivitiesController < ApplicationController
   end
 
   def new
+    @learning_objective = LearningObjective.find(params[:learning_objective_id])
     @activity = Activity.new
   end
 

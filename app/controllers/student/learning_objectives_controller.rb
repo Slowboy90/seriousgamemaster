@@ -1,6 +1,7 @@
 # class learning objective
 class Student::LearningObjectivesController < ApplicationController
   def index
+    @competency = params[:competency_id]
     @learning_objectives = LearningObjective.where(user_id: current_user.id, competency_id: @competency)
   end
 

@@ -1,5 +1,5 @@
 %h1 Nieuwe activiteit aanmaken!
-= form_for @activity, url: student_learning_objective_activities_path do |ac|
+= form_for @activity, url: student_competency_learning_objective_activities_path do |ac|
   %p
     = ac.label 'Omschrijving Activiteit'
     %br
@@ -8,4 +8,4 @@
   %p
     = ac.submit 'Bevestig'
 
-= link_to 'Terug naar alle activiteiten', student_learning_objective_activities_path(@learning_objective)
+= link_to 'Terug naar alle activiteiten', student_competency_learning_objective_activities_path(@learning_objective.competency.id, @learning_objective.id)
