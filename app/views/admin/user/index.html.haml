@@ -32,4 +32,18 @@ Alle docenten
       %td= te.education_name
       %td= te.email
 
+
+
+
+      Alle admins
+%table
+  %tr
+    %th Admin naam
+    %th Admin email 
+  = @admin.count
+  - @admin.each do |ad|
+    %tr
+      %td= ad.education_name
+      %td= ad.email
+
 = link_to 'Terug naar Admin Dashboard', admin_root_path
