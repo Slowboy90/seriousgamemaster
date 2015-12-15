@@ -1,7 +1,7 @@
 # class learning objective
 class Student::LearningObjectivesController < ApplicationController
   def index
-    @learning_objectives = current_user.learning_objectives.all
+    @learning_objectives = LearningObjective.where(user_id: current_user.id, competency_id: @competency)
   end
 
   def show

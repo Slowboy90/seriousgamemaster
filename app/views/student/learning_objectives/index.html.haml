@@ -6,7 +6,7 @@ Leerdoelen bij
     %th Leerdoel
   - @learning_objectives.each do |lo|
     %tr
-      %td= lo.name
+      %td= link_to lo.name, student_competency_learning_objective_activities_path(lo.competency.id, lo)
 
 
 -# Leerdoelen
