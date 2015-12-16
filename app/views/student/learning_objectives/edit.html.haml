@@ -1,3 +1,22 @@
 %h1 Leerdoel aanpassen
-= render 'form'
+= form_for @learning_objective, url: student_competency_learning_objective_path do |lo|
+  %p
+    = lo.label 'Omschrijving'
+    %br
+      = lo.text_field :name
+  %p
+    = lo.label 'Competentie'
+    %br
+      = lo.collection_select(:competency_id, Competency.all, :id, :name)
+  %p
+    = lo.label 'Leerjaar'
+    %br
+      = lo.number_field :academic_year
+  %p
+    = lo.label 'Semester'
+    %br
+      = lo.number_field :period
+  %p
+    = lo.submit 'Bevestig' 
 -# = link_to 'Terug naar alle leerdoelen', student_learning_objectives_path
+
