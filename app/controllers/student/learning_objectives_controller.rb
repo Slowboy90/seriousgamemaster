@@ -7,7 +7,6 @@ class Student::LearningObjectivesController < ApplicationController
 
   def show
     @learning_objective = LearningObjective.find(params[:id])
-    @learning_objective_id = LearningObjective.find(params[:id])
   end
 
   def new
@@ -44,7 +43,7 @@ class Student::LearningObjectivesController < ApplicationController
   def destroy
     @learning_objective = LearningObjective.find(params[:id])
     @learning_objective.destroy
-    redirect_to student_learning_objectives_path, notice: "Leerdoel succesvol verwijderd"
+    redirect_to student_competency_learning_objectives_path, notice: "Leerdoel succesvol verwijderd"
   end
 
   private
