@@ -1,0 +1,12 @@
+Dashboard Admin 
+%br 
+= link_to 'Alle competenties', admin_competencies_path
+%br
+= link_to 'Competentie aanmaken', new_admin_competency_path
+%br
+= link_to 'Nieuwe gebruiker aanmaken', new_user_registration_path
+%br
+= link_to 'Alle gebruikers', admin_user_index_path
+%br
+= link_to 'Log uit', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
+%br
