@@ -2,7 +2,7 @@
   %ul
     %h2 Competentie
     - @competency.each do |c|
-      = link_to student_competency_path(c) do 
+      = link_to student_competency_learning_objectives_path(c) do 
         %li
           %p{class: "#{calculate_color(c.name)} competenties"}= c.name
 
