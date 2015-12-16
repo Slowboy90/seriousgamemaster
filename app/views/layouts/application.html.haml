@@ -29,8 +29,8 @@
     #top
       .top-items
         %h1 Mijn dashboard
-    / - flash.each do |name, msg|
-    /   = content_tag :div, msg, class: name
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: name
     = yield
 
 
