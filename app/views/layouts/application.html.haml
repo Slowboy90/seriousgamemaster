@@ -19,16 +19,16 @@
         ._1
           %h1 searchform
         ._2
-          %h1 LearnWeb
-          / = link_to student_root_path
-          / = link_to 'Terug naar Dashboard', student_root_path
+          %h1 LearnWeb = link_to student_root_path
         ._3
-          %h1 Ingelogd als: [User name hier ]
+          - if user_signed_in?
+            %div
+              %h1 Ingelogd als: #{current_user.education_name}
         ._4
-          %a{:href => "#.html.haml"} Afmelden
+          %a{"data-confirm" => "Weet je het zeker?", "data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} Log uit
     #top
       .top-items
-        %h1 Dashboard van <%= @username %>
+        %h1 Mijn dashboard
     / - flash.each do |name, msg|
     /   = content_tag :div, msg, class: name
     = yield
