@@ -1,6 +1,5 @@
 # class competencies controller
 class Admin::CompetenciesController < ApplicationController
-  
   def index
     @competency = Competency.all
   end
@@ -19,10 +18,9 @@ class Admin::CompetenciesController < ApplicationController
     if @competency.save
       redirect_to admin_competencies_path, notice: 'Competentie succesvol aangemaakt'
     else
-      render "new"
+      render 'new'
     end
   end
-
 
   def edit
     @competency = Competency.find(params[:id])
@@ -36,10 +34,9 @@ class Admin::CompetenciesController < ApplicationController
        redirect_to admin_competencies_path, notice: 'Competentie succesvol aangepast'
 
     else
-      render "edit"
+      render 'edit'
     end
   end
-
 
   def destroy
     @competency = Competency.find(params[:id])

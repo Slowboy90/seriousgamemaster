@@ -1,4 +1,4 @@
-= form_for [:student, @learning_objective] do |lo|
+= form_for [:student, :competency, @learning_objective]  do |lo|
   %p
     = lo.label 'Omschrijving'
     %br
@@ -16,4 +16,4 @@
     %br
       = lo.number_field :period
   %p
-    = lo.submit 'Bevestig'
+    = lo.submit 'Bevestig' 

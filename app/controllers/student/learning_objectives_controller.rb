@@ -1,11 +1,13 @@
 # class learning objective
 class Student::LearningObjectivesController < ApplicationController
   def index
-    @learning_objectives = current_user.learning_objectives.all
+    @competency = params[:competency_id]
+    @learning_objectives = LearningObjective.where(user_id: current_user.id, competency_id: @competency)
   end
 
   def show
     @learning_objective = LearningObjective.find(params[:id])
+    @learning_objective_id = LearningObjective.find(params[:id])
   end
 
   def new
@@ -17,7 +19,7 @@ class Student::LearningObjectivesController < ApplicationController
     @learning_objective.user_id = current_user.id
 
     if @learning_objective.save
-      redirect_to student_learning_objectives_path, notice:  "Leerdoel succesvol aangemaakt"
+      redirect_to student_competency_learning_objectives_path, notice:  "Leerdoel succesvol aangemaakt"
     else
       render "new"
     end
@@ -25,6 +27,7 @@ class Student::LearningObjectivesController < ApplicationController
 
   def edit
     @learning_objective = LearningObjective.find(params[:id])
+    @lo = params[:id]
   end
 
   def update
