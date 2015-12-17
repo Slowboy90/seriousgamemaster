@@ -31,7 +31,7 @@ class Admin::CompetenciesController < ApplicationController
 
     if @competency.update(competency_params)
 
-       redirect_to admin_competencies_path, notice: 'Competentie succesvol aangepast'
+      redirect_to admin_competencies_path, notice: 'Competentie succesvol aangepast'
 
     else
       render 'edit'
