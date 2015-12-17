@@ -19,7 +19,8 @@
         ._1
           %h1 searchform
         ._2
-          %h1 LearnWeb = link_to student_root_path
+          =link_to "LearnWeb", student_root_path, class: "home"
+
         ._3
           - if user_signed_in?
             %div

@@ -1,10 +1,14 @@
 #sections
-  %ul
-    %h2 Competentie
-    - @competency.each do |c|
-      = link_to student_competency_learning_objectives_path(c) do 
-        %li
-          %p{class: "#{calculate_color(c.name)} competenties"}= c.name
+  #create
+    %ul
+      %h2 Snel naar...
 
-  = link_to 'Nieuw', new_student_competency_learning_objective_path(@competency)
-  = link_to 'Terug naar Dashboard', student_root_path
+      %h2 Competenties
+      - @competency.each do |c|
+        = link_to student_competency_learning_objectives_path(c) do 
+          %li
+            %p{class: "#{calculate_color(c.name)} competenties"}= c.name
+
+      %h2 Laatst aangepast
+      
+      = link_to 'Nieuw', new_student_competency_learning_objective_path(@competency)

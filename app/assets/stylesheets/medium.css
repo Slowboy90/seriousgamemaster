@@ -1,4 +1,4 @@
-@media (min-width: 850px) and (max-width: 1129px) {
+@media (min-width: 870px) and (max-width: 1129px) {
 
 a.home{
 	color:white;
@@ -31,22 +31,22 @@ a.home{
 ._2{
 	padding: 2px;
 	display: inline-block;
-	width: 25%;	
+	width: 100px;	
 	text-align: center;
-	margin-left: 7%;
+	margin-left: 8%;
 }
 
 ._3{
 	background-color: #455A64;
 	border-radius: 5px 0px 0px 5px;
-	width: 25%;
+	width: 250px;
 	padding: 10px;
 	display: inline-block;
 }
 ._4{
 	background-color: #CFD8DC;
 	border-radius: 0px 5px 5px 0px;
-	width: 60px;
+	width: 65px;
 	padding: 10px;
 	display: inline-block;
 }

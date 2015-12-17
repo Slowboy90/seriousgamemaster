@@ -21,7 +21,7 @@ competency6 = Competency.create(name: 'Growth & Reflection', description: 'Growt
 
 learning_objective1 = LearningObjective.create(name: 'Leerdoel 1 bij Design & Experience', user_id: 1, competency_id: 1)
 learning_objective2 = LearningObjective.create(name: 'Leerdoel 2 bij Design & Experience', user_id: 1, competency_id: 1)
-learning_objective2 = LearningObjective.create(name: 'Leerdoel 3 bij Design & Experience', user_id: 1, competency_id: 1)
+learning_objective3 = LearningObjective.create(name: 'Leerdoel 3 bij Design & Experience', user_id: 1, competency_id: 1)
 
 activity1 = Activity.create(description: 'Activiteit 1 bij leerdoel 1', learning_objective_id: 1, context_id: 1)
 activity2 = Activity.create(description: 'Activiteit 2 bij leerdoel 1', learning_objective_id: 1, context_id: 2)
