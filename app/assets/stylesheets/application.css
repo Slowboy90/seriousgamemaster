@@ -178,7 +178,7 @@ a{
 /* END SECTIONS */
 
 /* BLOKJES */
-#create a.li{
+.create {
 	width: 260px;
 	height: 60px;
 	margin: 10px;

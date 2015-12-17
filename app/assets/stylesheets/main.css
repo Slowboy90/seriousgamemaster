@@ -151,7 +151,7 @@ a{
 /* END SECTIONS */
 
 /* BLOKJES */
-#create a.li{
+#create {
 	width: 260px;
 	height: 60px;
 	margin: 10px;
@@ -161,7 +161,7 @@ a{
 	border-radius: 5px;
 }
 
-#create a.li:hover {
+#create:hover {
 	background-color: #03A9F4;
 }
 
