@@ -37,6 +37,9 @@ Rails.application.routes.draw do
 
     namespace :teacher, constraints: TeacherConstraint.new do
       root 'dashboard#index'
+      resources :user
+      get 'students' => 'user#students'
+      get 'teachers' => 'user#teachers'
     end
 
     namespace :admin, constraints: AdminConstraint.new do

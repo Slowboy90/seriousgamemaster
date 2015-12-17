@@ -1,0 +1,12 @@
+Alle docenten
+%table
+  %tr
+    %th Docent naam
+    %th Docent email 
+  = @teacher.count
+  - @teacher.each do |te|
+    %tr
+      %td= te.education_name
+      %td= te.email
+
+= link_to 'Terug naar dashboard', teacher_root_path
