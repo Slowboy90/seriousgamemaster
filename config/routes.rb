@@ -36,6 +36,7 @@ Rails.application.routes.draw do
     end
 
     namespace :teacher, constraints: TeacherConstraint.new do
+      root 'dashboard#index'
     end
 
     namespace :admin, constraints: AdminConstraint.new do
