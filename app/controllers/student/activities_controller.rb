@@ -1,6 +1,7 @@
 class Student::ActivitiesController < ApplicationController
   def index
     @activity = LearningObjective.find(params[:learning_objective_id]).activities.all
+    # @activity_id = Activity.find(params[:id])
   end
 
   def show
@@ -13,10 +14,11 @@ class Student::ActivitiesController < ApplicationController
   end
 
   def create
+    @learning_objective = LearningObjective.find(params[:learning_objective_id])
     @activity = LearningObjective.find(@learning_objective).activities.new(activity_params)
 
     if @activity.save
-      redirect_to student_learning_objective_activities_path(@learning_objective), notice: 'Activiteit succesvol aangemaakt'
+      redirect_to student_competency_learning_objective_activities_path, notice: 'Activiteit succesvol aangemaakt'
     else
       render 'new'
     end
