@@ -13,4 +13,4 @@
     %td= @learning_objective.achieved
 = link_to 'Terug naar alle leerdoelen', student_competency_learning_objectives_path
 = link_to 'Leerdoel aanpassen', edit_student_competency_learning_objective_path
-= link_to 'Leerdoel verwijderen',  student_competency_learning_objective_path(@learning_objective.competency.id, @learning_objective.id), method: :delete, data: { confirm: 'Weet je het zeker?' }
+= link_to 'Leerdoel verwijderen', student_competency_learning_objective_path(@learning_objective.competency.id, @learning_objective.id), method: :delete, data: { confirm: 'Weet je het zeker?' }
