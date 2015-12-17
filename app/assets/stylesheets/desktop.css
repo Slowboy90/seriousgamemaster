@@ -15,7 +15,7 @@
 /* DESKTOP HEADER ITEMS */
 ._1{
 	background-color: #455A64;
-	width: 250px;
+	width: 25%;
 	padding: 10px;
 	display: inline-block;
 	float: left;
@@ -25,9 +25,9 @@
 ._2{
 	padding: 2px;
 	display: inline-block;
-	float: left;
-	margin-left: 22%;
-	margin-right: 10%;
+	width: 100px;	
+	text-align: center;
+	margin-left: 18%;
 }
 
 ._3{
@@ -36,13 +36,11 @@
 	width: 250px;
 	padding: 10px;
 	display: inline-block;
-	float: left;
 }
-
 ._4{
 	background-color: #CFD8DC;
 	border-radius: 0px 5px 5px 0px;
-	width: 80px;
+	width: 65px;
 	padding: 10px;
 	display: inline-block;
 }
@@ -73,11 +71,16 @@
 	font-size: 16px;
 }
 
-.overzicht{
+.overview{
 	width:22%;
 	display:inline-block;
 	vertical-align:top;
 	padding: 5px;
+}
+
+.overview_link{
+	padding-bottom: 30px;
+	padding-top: 10px;
 }
 
 #overzicht a.li {
