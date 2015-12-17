@@ -1,3 +1,22 @@
 %h1 Nieuw leerdoel
-= render 'form'
+= form_for [:student, :competency, @learning_objective]  do |lo|
+  %p
+    = lo.label 'Omschrijving'
+    %br
+      = lo.text_field :name
+  %p
+    = lo.label 'Competentie'
+    %br
+      = lo.collection_select(:competency_id, Competency.all, :id, :name)
+  %p
+    = lo.label 'Leerjaar'
+    %br
+      = lo.number_field :academic_year
+  %p
+    = lo.label 'Semester'
+    %br
+      = lo.number_field :period
+  %p
+    = lo.submit 'Bevestig' 
+
 = link_to 'Terug', student_root_path

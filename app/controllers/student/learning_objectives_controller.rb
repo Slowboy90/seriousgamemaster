@@ -7,7 +7,6 @@ class Student::LearningObjectivesController < ApplicationController
 
   def show
     @learning_objective = LearningObjective.find(params[:id])
-    @learning_objective_id = LearningObjective.find(params[:id])
   end
 
   def new
@@ -27,7 +26,6 @@ class Student::LearningObjectivesController < ApplicationController
 
   def edit
     @learning_objective = LearningObjective.find(params[:id])
-    @lo = params[:id]
   end
 
   def update
@@ -35,7 +33,7 @@ class Student::LearningObjectivesController < ApplicationController
 
     if @learning_objective.update(learning_objective_params)
 
-       redirect_to student_root_path, notice: "Leerdoel succesvol aangepast"
+       redirect_to student_competency_learning_objectives_path, notice: "Leerdoel succesvol aangepast"
 
     else
       render "edit"
@@ -45,7 +43,7 @@ class Student::LearningObjectivesController < ApplicationController
   def destroy
     @learning_objective = LearningObjective.find(params[:id])
     @learning_objective.destroy
-    redirect_to student_learning_objectives_path, notice: "Leerdoel succesvol verwijderd"
+    redirect_to student_competency_learning_objectives_path, notice: "Leerdoel succesvol verwijderd"
   end
 
   private
