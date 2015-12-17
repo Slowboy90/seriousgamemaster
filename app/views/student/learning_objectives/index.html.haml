@@ -1,22 +1,11 @@
-Leerdoelen
+= current_user.id
+= @competency # doet hij nog neit want staat niet in de goede controller gedefinieerd
+Leerdoelen bij
 %table
   %tr
-    %th Naam
-    %th Competentie
-    %th Leerjaar
-    %th Semester
-    %th Behaald?
+    %th Leerdoel
   - @learning_objectives.each do |lo|
     %tr
-      %td= lo.name
-      %td= lo.competency.name unless lo.competency.nil?
-      %td= lo.academic_year
-      %td= lo.period
-      %td= lo.achieved
-      %td= link_to 'Show', student_learning_objective_path(lo)
-      %td= link_to 'Leerdoel aanpassen', edit_student_learning_objective_path(lo)
-      %td= link_to 'Leerdoel verwijderen', student_learning_objective_path(lo), method: :delete, data: { confirm: 'Weet je het zeker?' }
-      %td= link_to 'Activiteit toevoegen', student_learning_objective_activities_path(lo)
-= link_to 'Nieuw', new_student_learning_objective_path
-= link_to 'Terug naar Dashboard', student_root_path
-= link_to 'Log uit', destroy_user_session_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
+      %td= link_to lo.name, student_competency_learning_objective_activities_path(lo.competency.id, lo)
+      %td= link_to 'Lees verder', student_competency_learning_objective_path(lo.competency.id, lo)
+= link_to 'Een nieuw leerdoel aanmaken', new_student_competency_learning_objective_path

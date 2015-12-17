@@ -1,14 +1,36 @@
 !!!
 %html
   %head
-    %title Seriousgamemaster
+    %title LearnWeb
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    %link{:href => "desktop.css", :media => "screen and (min-width: 801px)", :rel => "stylesheet"}/
+    %link{:href => "mobile-style.css", :media => "screen and (min-width: 100px) and (max-width: 799px)", :rel => "stylesheet"}/
+    
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0, user-scalable=yes", :name => "viewport"}/
+    
   %body
+    #wrapper
+    .button-wrapper
+      .wrapper-items
+        ._1
+          %h1 searchform
+        ._2
+          %h1 LearnWeb = link_to student_root_path
+        ._3
+          - if user_signed_in?
+            %div
+              %h1 Ingelogd als: #{current_user.education_name}
+        ._4
+          %a{"data-confirm" => "Weet je het zeker?", "data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} Log uit
+    #top
+      .top-items
+        %h1 Mijn dashboard
     - flash.each do |name, msg|
       = content_tag :div, msg, class: name
-
     = yield
 
 
