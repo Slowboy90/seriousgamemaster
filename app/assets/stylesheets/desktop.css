@@ -71,11 +71,16 @@
 	font-size: 16px;
 }
 
-.overzicht{
+.overview{
 	width:22%;
 	display:inline-block;
 	vertical-align:top;
 	padding: 5px;
+}
+
+.overview_link{
+	padding-bottom: 30px;
+	padding-top: 10px;
 }
 
 #overzicht a.li {
