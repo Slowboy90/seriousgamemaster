@@ -30,7 +30,9 @@ Rails.application.routes.draw do
       root 'dashboard#index'
       resources :competencies do
         resources :learning_objectives do
-          resources :activities
+          resources :activities do
+            resources :contexts
+          end
         end
       end
     end

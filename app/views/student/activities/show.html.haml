@@ -6,4 +6,5 @@
 
 = link_to 'Activiteit aanpassen', edit_student_competency_learning_objective_activity_path
 = link_to 'Activiteit verwijderen', student_competency_learning_objective_activity_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
+= link_to 'Context toevoegen', new_student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity)
 = link_to 'Back', student_root_path
