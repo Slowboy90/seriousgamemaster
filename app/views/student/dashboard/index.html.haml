@@ -1,14 +1,16 @@
 #sections
-  #create
-    %ul
-      %h2 Snel naar...
+  %h2 Snel naar...
+  =link_to "Leerdoel toevoegen", new_student_competency_learning_objective_path(@competency), class: "teacher-blocks"
+  
+  =link_to "Mijn profiel", new_student_competency_learning_objective_path(@competency), class: "teacher-blocks"
+  
+  =link_to "Gebruikersoverzicht", student_root_path, class: "teacher-blocks"
 
-      %h2 Competenties
-      - @competency.each do |c|
-        = link_to student_competency_learning_objectives_path(c) do 
-          %li
-            %p{class: "#{calculate_color(c.name)} competenties"}= c.name
+  %ul
+    %h2 Competenties
+    - @competency.each do |c|
 
-      %h2 Laatst aangepast
-      
-      = link_to 'Nieuw', new_student_competency_learning_objective_path(@competency)
+      = link_to student_competency_learning_objectives_path(c) do 
+        %li{class: "#{calculate_color(c.name)} competenties"}= c.name
+
+  
