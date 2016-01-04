@@ -9,7 +9,7 @@ class Student::ActivitiesController < ApplicationController
     if context.nil?
       @co = 'Er moet nog een context worden toegevoegd'
     else
-      @co = @context.description
+      @co = context.description
     end
   end
 
