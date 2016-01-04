@@ -46,6 +46,6 @@ end
 
   def activity_params
     params.require(:activity)
-      .permit(:description, :learning_objective_id, :context_id)
+      .permit(:description, :learning_objective_id)
   end
 end

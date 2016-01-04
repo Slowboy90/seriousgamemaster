@@ -23,13 +23,13 @@ learning_objective1 = LearningObjective.create(name: 'Leerdoel 1 bij Design & Ex
 learning_objective2 = LearningObjective.create(name: 'Leerdoel 2 bij Design & Experience', user_id: 1, competency_id: 1)
 learning_objective3 = LearningObjective.create(name: 'Leerdoel 3 bij Design & Experience', user_id: 1, competency_id: 1)
 
-activity1 = Activity.create(description: 'Activiteit 1 bij leerdoel 1', learning_objective_id: 1, context_id: 1)
-activity2 = Activity.create(description: 'Activiteit 2 bij leerdoel 1', learning_objective_id: 1, context_id: 2)
-activity3 = Activity.create(description: 'Activiteit 3 bij leerdoel 1', learning_objective_id: 1, context_id: 3)
+activity1 = Activity.create(description: 'Activiteit 1 bij leerdoel 1', learning_objective_id: 1)
+activity2 = Activity.create(description: 'Activiteit 2 bij leerdoel 1', learning_objective_id: 1)
+activity3 = Activity.create(description: 'Activiteit 3 bij leerdoel 1', learning_objective_id: 1)
 
-context1 = Context.create(description: 'Context 1 bij bij activiteit 1')
-context2 = Context.create(description: 'Context 1 bij bij activiteit 2')
-context3 = Context.create(description: 'Context 1 bij bij activiteit 3')
+context1 = Context.create(description: 'Context 1 bij bij activiteit 1', activity_id: 1)
+context2 = Context.create(description: 'Context 1 bij bij activiteit 2', activity_id: 2)
+context3 = Context.create(description: 'Context 1 bij bij activiteit 3', activity_id: 3)
 
 proof1 = Proof.create(description: 'Bewijs 1 bij activiteit 1', activity_id: 1)
 proof2 = Proof.create(description: 'Bewijs 2 bij activiteit 1', activity_id: 1)
