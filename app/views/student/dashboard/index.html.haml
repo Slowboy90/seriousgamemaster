@@ -4,7 +4,8 @@
   
   =link_to "Mijn profiel", new_student_competency_learning_objective_path(@competency), class: "teacher-blocks"
   
-  =link_to "Gebruikersoverzicht", student_root_path, class: "teacher-blocks"
+  = link_to 'Overzicht Studenten', teacher_students_path, class: "teacher-blocks"
+  = link_to 'Overzicht Docenten', teacher_teachers_path, class: "teacher-blocks"
 
   %ul
     %h2 Competenties

@@ -46,13 +46,13 @@
         =link_to "Bekijk profiel", admin_user_index_path
   .user_overview
     .user_overview_inside 
-      Docent
+      Admin
   .user_overview
     .user_overview_inside 
       Tel nr. hier
   .user_overview
     .user_overview_inside 
-      - @teacher.each do |ad|
+      - @admin.each do |ad|
         = ad.email
 
   
