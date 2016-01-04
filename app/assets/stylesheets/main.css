@@ -1,3 +1,5 @@
+/* MAIN.CSS CONTAINS MAIN SETTINGS OF APPLICATION*/
+
 /* CSS RESET! */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -54,81 +56,36 @@ table {
 
 /* BASIC SETTINGS */
 body{
-    font-family: "Ubuntu";
+	font-family: 'Ubuntu';
     color: black;
+    margin: auto;
 }
 
 p {
 	padding: 10px;
 	font-size: 14px;
 	color: #445A64;
+	font-family: 'Ubuntu';
 }
 h1{
 	color: white;
+	font-family: 'Ubuntu';
 }
 h2 {
 	padding-left: 10px;
 	font-weight: medium;
 	font-size: 20px;
 	color: #455A64;
+	font-family: 'Ubuntu';
 }
 
 h3 {
 	color:white;
 	font-size: 14px;
+	font-family: 'Ubuntu';
 }
 
-h6 {
-	font-weight: thin;
-	font-size: 16px;
-	color: #455A64;
-}
 /* END BASIC SETTINGS */
-
-/* FRAMEWORK SETTINGS */
-.button-wrapper{
-	display: inline-block;
-	width: 100%;
-	color: white;
-	background-color: #607D8D;
-	padding-left: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;	
-}
-
-/* END FRAMEWORK SETTINGS */
-
-/* DESKTOP FRAMEWORK SETTINGS */
-#wrapper{	 
-	min-width:1130px;
-}
-
-.wrapper-items{
-	max-width: 1200px;
-	margin-left:auto;
-	margin-right:auto;
-}
-/* END DESKTOP FRAMEWORK SETTINGS */
-
-/* TOP ITEMS */
-#top {
-	display: inline-block;
-	width: 100%;
-	background-color: #03A9F4;
-	height: 50px;
-	line-height: 50px;
-	text-align: left;
-	padding-left: 10px;
-	font-size: 16px;
-}
-
-.top-items{
-	max-width: 1200px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-/* END TOP ITEMS */
 
 /* LINK SETTINGS */
 a.home{
@@ -141,149 +98,308 @@ a.home:hover{
 }
 
 a{
-	color: #607D8D;
+	color: black;
 	text-decoration: none;
+	font-family: 'Ubuntu';
 }
 
+a:hover{
+	color:#455A64;
+}
 /* 	END LINK SETTINGS */
 
-/* SECTIONS */
-#toevoegen {
-	position: relative;
-	display: block;
+/* LOG IN */
+.devise-top{
+	padding: 10px;
+	padding-left: 20px;
+	background-color: #03A9F4;
+	height: 30px;
+	font-size: 20px;
+	text-align: left;
+	margin-bottom: 30px;
 }
+.devise{
+	margin: auto;
+	height: 350px;
+	padding-bottom: 20px;
 
-#leerdoelen {
-	position: relative;
-	display: block;
-}
-/* END SECTIONS */
-
-/* BLOCKS */
-#create a{
-	width: 260px;
-	height: 60px;
-	margin: 10px;
-	background-color: #B3E5FC;
-	list-style-type: none;
-	display: inline-block;
+	background-color: white;
+	border-style: solid;
+    border-width: 1px;
+	border-color: #03A9F4;
+	margin-top: 5%;
+	text-align: center;
 	border-radius: 5px;
 }
-
-#create a:hover {
-	background-color: #03A9F4;
+.devise_label_box{
+	border: 1px double #CCCCCC;
+	border-radius: 5px;
+	padding:4px 8px;
+	font-size: 16px;
+	margin-bottom: 10px;
+	margin-top: 5px;
 }
 
+.new{
+	text-align: center;
+	width: 100%;
+	height:100px;
+}
+/*END LOG IN*/
+
+/* SEARCHBAR MAIN SETTINGS*/
+.container-1{
+  vertical-align: middle;
+  position: relative;
+}
+.container-1 input#search{
+
+  background: #455A64;
+  border: none;
+  font-size: 12pt;
+  float: left;
+  color: white;
+  padding-left: 45px;
+  padding-right: 45px;
+  border-radius: 5px;
+}
+.container-1 input#search::-webkit-input-placeholder {
+   color: white;
+}
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color: white;
+}
+.container-1 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: white;
+}  
+/* END SEARCHBAR MAIN SETTINGS*/
+
+
+/* BLUE SYSTEM COLOR BLOCKS */
+.teacher-blocks{
+	width: 260px;
+	height: 55px;
+	margin: 10px;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 5px;
+	color: #445A64;
+	background-color: #B3E5FC;
+	margin-bottom: 30px;
+	color: black;
+}
+
+.teacher-blocks:hover{
+	background-color: #03A9F4;
+}
+/* END BLUE SYSTEM COLOR BLOCKS */
+
+/* SETTINGS FOR COMPETENCYBLOCKS*/
+.competenties {
+	font-family: 'Ubuntu';
+	width: 260px;
+	height: 110px;
+	margin: 10px;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 3px;
+	color: black;
+}
 .default-color {
 	background-color: #B3E5FC;
 }
-.competenties {
-	width: 260px;
-	height: 100px;
-	margin: 10px;
-	list-style-type: none;
-	display: inline-block;
-	border-radius: 5px;
-	color: #445A64;
+.default-color:hover{
+	background-color: #03A9F4;
 }
 
 .design_experience {
 	background-color: #FFE0B2;
 }
 .design_experience:hover {
-	background-color: orange;
+	background-color: #FF9800;
 }
+
 
 .implementation_integration {
 	background-color: #C8E6C9;
 }
 
 .implementation_integration:hover {
-	background-color: green;
+	background-color: #4CAF50;
 }
+
 
 .research_innovation {
 	background-color: #C5CAE9;
 }
-
 .research_innovation:hover {
-	background-color: #607D8D;
+	background-color: #3F51B5;
 }
+
 
 .projectmanagement_leadership {
 	background-color: #E1BEE7;
 }
 .projectmanagement_leadership:hover {
-	background-color: purple;
+	background-color: #9C27B0;
 }
+
 
 .communication_sharing {
 	background-color: #FFCDD2;
 }
 .communication_sharing:hover {
-	background-color: pink;
+	background-color: #F44336;
 }
 
 .growth_reflection {
-	background-color: #FFF9C4;
+	background-color: #F0F4C3;
 }
-
 .growth_reflection:hover {
-	background-color: yellow;
+	background-color: #CDDC39;
 }
+/* END SETTINGS FOR COMPETENCYBLOCKS*/
 
-#competenties2 a.li {
-	width: 260px;
-	height: 100px;
-	margin: 10px;
-	background-color: #B3E5FC;
-	list-style-type: none;
-	display: inline-block;
-	border-radius: 5px;
+
+/* LEARNING OBJECTIVE OVERVIEW*/
+.lo_block{
+	margin:10px;
+    font-size: 14px;
+    font-weight: bold;
 }
-/* END BLOCKS */
-
-/* DESKTOP HEADER ITEMS */
-._1{
-	background-color: #455A64;
-	width: 250px;
-	padding: 10px;
-	display: inline-block;
-	float: left;
-	border-radius: 5px;
-}
-
-._2{
-	padding: 2px;
-	display: inline-block;
-	float: left;
-	margin-left: 22%;
-	margin-right: 10%;
-}
-
-._3{
-	background-color: #455A64;
-	border-radius: 5px 0px 0px 5px;
-	width: 250px;
-	padding: 10px;
-	display: inline-block;
-	float: left;
-}
-
-._4{
-	background-color: #CFD8DC;
-	border-radius: 0px 5px 5px 0px;
-	width: 80px;
-	padding: 10px;
-	display: inline-block;
-}
-
-/* END HEADER ITEMS */
-
-/* DESKTOP BLOCKS */
-#sections {
-	width: 1200px;
-	margin: auto;
+h2.name{
+	font-size: 15px;
 	padding-top: 10px;
+	color: black;
 }
-/* END DESKTOP BLOCKS */
+/* LEARNING OBJECTIVE OVERVIEW*/
+
+/*ADMIN COMPETENCY OVERVIEW*/
+.inside_block_up{
+	margin:10px;
+	font-size: 13px;
+}
+
+.inside_block_mid{
+	margin:10px;
+    font-size: 14px;
+}
+.inside_block_down{
+	margin:10px;
+	font-size: 14px;
+	color: black;
+    font-weight: bold;
+}
+/* END ADMIN COMPETENCY OVERVIEW*/
+
+
+
+
+/* BLOCKS ACTIVITY OVERVIEW*/
+.overview_link{
+	padding-bottom: 30px;
+	padding-top: 20px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	border-style: solid;
+    border-width: 1px;
+	border-color: gray;
+}
+/* END BLOCKS ACTIVITY OVERVIEW*/
+
+/* CSS POP UP STYLES*/
+.center{
+	background-color: white;
+	border-style: solid;
+    border-width: 1px;
+	border-color: gray;
+	border-radius: 5px;
+}
+.center-top{
+	background-color: #607D8B;
+	color: white;
+	font-size: 20px;
+}
+.center-button{
+	display: inline-block;
+	border-radius: 5px;
+	color: #445A64;
+	background-color: #CFD8DC;
+	color: black;
+	text-align: center;
+}
+.center-button:hover{
+	background-color: #607D8B;
+	color:white;
+}
+/* END CSS POP UP STYLES */
+
+
+/* FORMS STRUCTURE*/
+.under{
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: 'Ubuntu'
+}
+
+.sub{
+	margin-top: 5px;
+	margin-bottom: 30px;
+	margin-right: 20px;
+}
+/* END FORM STRUCTURE*/
+
+/* FORMS MAIN SETTINGS*/
+textarea#message_area {
+  border-radius: 5px;
+  border: 1px double #CCCCCC;
+  padding:4px 8px;
+  font-size: 16px;
+}
+
+textarea#message_box {
+  border-radius: 5px;
+  border: 1px double #CCCCCC;
+  padding:4px 8px;
+  font-size: 16px;
+}
+
+.submit_button{
+	padding:5px 15px; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+	background-color: #CFD8DC;
+	font-size: 16px;
+}
+.submit_button:hover{ 
+	background-color: #607D8B;
+	color: white;
+}
+
+.label_box{
+	border: 1px double #CCCCCC;
+	border-radius: 5px;
+	padding:4px 8px;
+	font-size: 16px;
+}
+/* END MAIN FORMS*/
+

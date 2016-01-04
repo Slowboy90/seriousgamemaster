@@ -1,52 +1,59 @@
-@media (min-width: 551px) and (max-width: 870px) {
+@media (min-width: 568px) and (max-width: 885px) {
 
-p {
-	padding: 0px;
+/* LOG IN */
+.devise{
+	width: 65%;
 }
 
-a.home{
-	color:white;
-	font-size: 16px;
+.devise_label_box{
+	width: 250px;
 }
+/* END LOG IN */
 
-/* DESKTOP FRAMEWORK SETTINGS */
+/* CENTER THE BLOCKS AND CONTENT */
 #wrapper{	 
-	min-width:500px;
+	width: 100%;
+	margin: auto;
 }
 
-.button-wrapper{
-	display: block;
-	width: auto;
-	height: 100px;
+#sections {
+	max-width: 800px;
+	margin: auto;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+/* END CENTER THE BLOCKS AND CONTENT */
+
+/* HEADER ITEMS */
+.button_wrapper{	
+	display: inline-block;
+	width: 100%;
 	color: white;
 	background-color: #607D8D;
-	padding: 50px;
-	padding-top: 10px;	
-	padding-bottom: 70px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .wrapper-items{
-	margin-left:auto;
-	margin-right:auto;
-	max-width: 650px;
-
+	max-width: 800px;
+	width: 95%;
+	padding: 0px;
+	margin: auto;
 }
-/* END MOBILE FRAMEWORK SETTINGS */
 
-/* MOBILE HEADER ITEMS DASHBOARD */
 ._1{
 	background-color: #455A64;
-	width: 100%;
+	width: auto;
 	padding: 10px;
 	display: block;
 	border-radius: 5px;
 	text-align: center;
-
 }
 
 ._2{
 	display: block;
-	width: 100%;	
+	width: auto;	
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -55,106 +62,188 @@ a.home{
 }
 
 ._3{
-	width: 100%;
-	padding: 10px;
-	display: block;
-	border-radius: 5px;
-	text-align: center;
-
+	display: none;
 }
 ._4{
 	background-color: #CFD8DC;
-	width: 100%;
+	width: auto;
 	padding: 10px;
 	border-radius: 5px;
 	text-align: center;
 }
+
+/* SEARCHBAR SETTINGS SMALL+MOBILE*/
+.container-1{
+  width: 100%;
+}
+
+.container-1 input#search{
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  float: left;
+  padding-left: 45px;
+  margin-bottom: 10px;
+}
+
+.container-1 .icon{
+  margin-left: 17px;
+  margin-top: 10px;
+}
+/* SEARCHBAR SETTINGS SMALL+MOBILE*/
 /* END HEADER ITEMS */
 
-
+/* TOP ITEMS */
 #top {
-	height: 30px;
-	line-height: 30px;
-	display: block;
-	width: auto;
-	text-align: center;
+	display: none;
 }
+/* END TOP ITEMS */
 
-/* MOBILE BLOCKS DASHBOARD */
-#sections {	
-	margin: auto;
-	padding-top: 10px;
-	padding-left: 60px;
 
-}
-/* END BLOCKS */
-
-/* MOBILE BLOCKS DASHBOARD */
-#create a.li {
-	width: 40%;
-	padding: 10px;
-	height: 20px;
-	margin: 10px;
-	background-color: #B3E5FC;
-	list-style-type: none;
+/* BLUE SYSTEM COLOR BLOCKS */
+.teacher-blocks{
+	width: 43%;
+	height: 50px;
+	margin-left: 15px;
 	display: inline-block;
-	border-radius: 5px;
-	line-height: 20px;
+	padding: 5px;
+	margin-bottom: 30px;
 }
+/* BLUE SYSTEM COLOR BLOCKS */
 
-#competenties a.li {
-	width: 40%;
-	height: 50px;
-	padding: 10px;
-	margin: 10px;
-	list-style-type: none;
-	display: inline-block;;
-	border-radius: 5px;
+/* COLORED COMPETENCIE BLOCKS*/
+.competenties {
+	font-family: 'Ubuntu';
+	width: 44%;
+	height: 90px;
+	margin-left: 15px;
+	margin-top: 5px;
+	padding-bottom: 10px;
+	display: inline-block;
 }
+/* COLORED COMPETENCIE BLOCKS*/
 
-#competenties2 a.li {
-	width: 40%;
-	height: 50px;
-	padding: 10px;
-	margin: 10px;
-	background-color: #B3E5FC;
-	list-style-type: none;
-	display: inline-block;;
-	border-radius: 5px;
+/*LEARNING OBJECTIVE OVERVIEW SMALL*/
+.lo_block{
+    text-align: center;
+    margin-top: 30px;
 }
-/* END BLOCKS DASHBOARD */
+/*END LEARNING OBJECTIVE OVERVIEW SMALL*/
 
-/* BLOCKS COMPETENCY OVERVIEW*/
-#top_growth_reflection {
-	display: block;
-	width: auto;
-	background-color: #bfff00;
-	height: 50px;
-	line-height: 50px;
-	text-align: left;
-	padding-left: 10px;
-	margin-bottom: 20px;
+/* ADMIN COMPETENCY OVERVIEW SMALL*/
+.inside_block_down{
+    display: block;
+    text-align: center;
+}
+/* END ADMIN COMPETENCY OVERVIEW SMALL*/
+
+/* BLOCKS USER OVERVIEW SMALL*/
+.user_overview h2{
 	font-size: 16px;
 }
-
-.overzicht{
-	width:auto;
-	display:block;
-	padding: 5px;
+.user_overview{
+	width:24%;
+	display:inline-block;
+	vertical-align:top;
+	font-weight: bold;
+	font-size: 12px;
 }
 
-#overzicht a.li {
-	width: 100%;
-	height: 100px;
-	list-style-type: none;
-	display: inline-block;
+.user_overview_inside{
+	text-align: left;
+	padding-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 2px;
+}
+/* END BLOCKS USER OVERVIEW SMALL*/
+
+/* CSS POP UP SMALL*/
+.center{
+	margin: auto;
+	width: 90%;
+	margin-top: 5%;
 	border-radius: 5px;
-	color: #445A64;
-	background-color: #bfff00;
-	margin-top: 5px;
+}
+.center-top{
+	padding: 10px;
+	height: 40px;
+}
+.center-content{
 	margin-bottom: 5px;
+	padding: 10px;
+	padding-left: 30px;
+}
+.center-button{
+	width: 28%;
+	height: 50px;
+	line-height: 50px;
+	padding: 2px;
+	font-size: 14px;	
+	margin-right: 8px;
+	margin-left: 8px;
+	font-size: 12px;
+}
+/* END CSS POP UPS */
+
+/* BLOCKS COMPETENCY OVERVIEW SMALL*/
+.overview{
+	width:45%;
+	display:inline-block;
+	vertical-align:top;
+	padding: 10px;
+	text-align: center;
+}
+/* END BLOCKS COMPETENCY OVERVIEW SMALL*/
+
+/* FORMS STRUCTURE SMALL*/
+.under{
+	margin: auto;
+	max-width: 885px;
+	width: 90%;
+	text-align: center;
 
 }
-#overzicht a.li:hover{
-	background-color: orange;
-/* END BLOCKS COMPETENCY OVERVIEW*/
+.sub{
+	width: auto;
+	padding: 0px;
+	margin-bottom: 20px;
+}
+/* END FORM STRUCTURE*/
+
+.competenties{
+	height: 115px;
+}
+/* FORMS SMALL*/
+textarea#message_area {
+  	margin: auto;
+	max-width: 885px;
+	width: 97%;
+  	height: 100px;
+}
+
+textarea#message_box {
+	margin: auto;
+	max-width: 885px;
+	width: 97%;
+	height: 30px;
+
+}
+
+.submit_button{
+	height: 40px;
+	width: 100%;
+	margin-bottom: 30px;
+	margin-top: 30px;
+
+}
+.submit_button:hover{ 
+	background-color: #607D8B;
+	color: white;
+}
+
+.label_box{
+	margin: auto;
+	max-width: 885px;
+	width: 97%;
+}
+/* END FORMS SMALL*/
