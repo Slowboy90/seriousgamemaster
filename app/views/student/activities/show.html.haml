@@ -4,7 +4,8 @@
   %tr
     %td= @activity.description
   %tr
-    %td= @context.description
+    %td= @co
+      
 
 = link_to 'Activiteit aanpassen', edit_student_competency_learning_objective_activity_path
 = link_to 'Activiteit verwijderen', student_competency_learning_objective_activity_path, method: :delete, data: { confirm: 'Weet je het zeker?' }

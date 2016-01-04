@@ -5,7 +5,12 @@ class Student::ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
-    @context = Context.where(activity_id: @activity).first
+    context = Context.where(activity_id: @activity).first
+    if context.nil?
+      @co = 'Er moet nog een context worden toegevoegd'
+    else
+      @co = @context.description
+    end
   end
 
   def new
