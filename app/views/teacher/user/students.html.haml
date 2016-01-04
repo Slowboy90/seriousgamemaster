@@ -1,12 +1,26 @@
-Alle studenten
-%table
-  %tr
-    %th Student naam
-    %th Student email 
-  = @student.count
-  - @student.each do |st|
-    %tr
-      %td= st.education_name
-      %td= st.email
-      %td= @student.count
-= link_to 'Terug naar dashboard', teacher_root_path
+#sections
+  
+  .user_overview
+    %h2 Naam
+    .user_overview_inside    
+      - @student.each do |st|
+        = st.education_name  
+        =link_to "Bekijk profiel", student_root_path
+
+  .user_overview
+    %h2 Functie
+    .user_overview_inside 
+      Student
+  .user_overview
+    %h2 Telefoonnummer
+    .user_overview_inside 
+      Tel nr. hier
+  .user_overview
+    %h2 E-mailadres
+    .user_overview_inside 
+      - @student.each do |st|
+        = st.email
+  %hr
+
+  .under
+    = link_to 'Terug naar dashboard', root_path
