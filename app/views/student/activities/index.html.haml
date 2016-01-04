@@ -1,15 +1,26 @@
-Activiteiten
-%table
-  %tr
-    %th Beschrijving 
-  - @activity.each do |ac|
-    %tr
-      %td= ac.description
+#sections
+  %h2 Activiteit bekijken
 
-      = puts "competecy id: #{params[:competency_id]}"
-      = puts "learning_objective_id: #{params[:learning_objective_id]}"
-      %td= link_to 'Meer informatie', student_competency_learning_objective_activity_path(learning_objective_id: params[:learning_objective_id], id: ac.id)
--#       %td= link_to 'Activiteit aanpassen', edit_student_learning_objective_activity_path(ac.learning_objective, ac)
--#       %td= link_to 'Activiteit verwijderen', student_learning_objective_activity_path(ac.learning_objective, ac), method: :delete, data: { confirm: 'Weet je het zeker?' }
-= link_to 'Nieuwe activiteit', new_student_competency_learning_objective_activity_path
-= link_to 'Terug naar Dashboard', student_root_path
+  - @activity.each do |ac|
+  
+    .overview
+      .overview_link
+        %h2 Activiteit:
+        %p= ac.description
+
+        = puts "competecy id: #{params[:competency_id]}"
+        = puts "learning_objective_id: #{params[:learning_objective_id]}"
+        
+        %p= link_to 'Meer informatie', student_competency_learning_objective_activity_path(learning_objective_id: params[:learning_objective_id], id: ac.id)
+
+  .under
+  .overview
+    .overview_link
+      = link_to '+ Nieuwe activiteit', new_student_competency_learning_objective_activity_path
+      
+  .under
+  =link_to "Terug naar overzicht", student_competency_learning_objectives_path
+  |
+  = link_to 'Terug naar Dashboard', student_root_path
+
+

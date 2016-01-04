@@ -1,9 +1,17 @@
-%table
-  %tr
-    %th Omschrijving activiteit
-  %tr
-    %td= @activity.description
+#sections
+  %h2 Omschrijving activiteit
+  %p= @activity.description
 
-= link_to 'Activiteit aanpassen', edit_student_competency_learning_objective_activity_path
-= link_to 'Activiteit verwijderen', student_competency_learning_objective_activity_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
-= link_to 'Back', student_root_path
+  .under
+  .overview
+    .overview_link
+      = link_to 'Activiteit aanpassen', edit_student_competency_learning_objective_activity_path
+  .under
+  .overview
+    .overview_link
+      = link_to 'Activiteit verwijderen', student_competency_learning_objective_activity_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
+
+  .under
+    = link_to "Terug naar overzicht", student_competency_learning_objectives_path
+    |
+    = link_to 'Terug naar Dashboard', root_path
