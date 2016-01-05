@@ -13,4 +13,4 @@
 -unless @context.nil?
   = link_to 'Context aanpassen', edit_student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context)
   = link_to 'Context verwijderen', student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context), method: :delete, data: { confirm: 'Weet je het zeker?' }
-= link_to 'Back', student_root_path
+= link_to 'Back', student_competency_learning_objective_activities_path

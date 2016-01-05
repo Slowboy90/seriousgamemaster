@@ -38,6 +38,7 @@ class Student::ContextsController < ApplicationController
     @context.destroy
     redirect_to student_competency_learning_objective_activity_path(params[:competency_id], params[:learning_objective_id], params[:activity_id]), notice: 'Activiteit succesvol verwijderd'
   end
+  
   private
 
   def context_params

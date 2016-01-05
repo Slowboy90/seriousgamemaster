@@ -46,7 +46,7 @@ class Student::ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
     @activity.destroy
     redirect_to student_competency_learning_objective_activities_path, notice: 'Activiteit succesvol verwijderd'
-end
+  end
 
   private
 
