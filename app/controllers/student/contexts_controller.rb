@@ -19,6 +19,20 @@ class Student::ContextsController < ApplicationController
     end
   end
 
+  def edit
+    @context = Context.find(params[:id])
+  end
+
+  def update
+    @context = Context.find(params[:id])
+
+    if @context.update(context_params)
+      redirect_to student_competency_learning_objective_activity_path(params[:competency_id], params[:learning_objective_id], params[:activity_id]), notice: 'Context succesvol aangepast'
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def context_params
