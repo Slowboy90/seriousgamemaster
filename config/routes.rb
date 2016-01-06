@@ -26,25 +26,31 @@ Rails.application.routes.draw do
   devise_for :users
 
   authenticated :user do
-
     namespace :student, constraints: StudentConstraint.new do
       root 'dashboard#index'
       resources :competencies do
         resources :learning_objectives do
-          resources :activities
+          resources :activities do
+            resources :contexts
+          end
         end
       end
     end
 
     namespace :teacher, constraints: TeacherConstraint.new do
+      root 'dashboard#index'
+      resources :user
+      get 'students' => 'user#students'
+      get 'teachers' => 'user#teachers'
     end
 
     namespace :admin, constraints: AdminConstraint.new do
-      root 'competencies#index'
+      root 'dashboard#index'
       resources :competencies
+      resources :user
     end
   end
-  
+
   root 'pages#root'
   get 'home/index'
 end

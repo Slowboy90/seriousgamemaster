@@ -1,11 +1,19 @@
-%h1 Nieuwe activiteit aanmaken!
-= form_for @activity, url: student_learning_objective_activities_path do |ac|
-  %p
-    = ac.label 'Omschrijving Activiteit'
-    %br
-      = ac.text_field :description
- 
-  %p
-    = ac.submit 'Bevestig'
+#sections
+  %h2 Nieuwe activiteit aanmaken
+  
+  = form_for @activity, url: student_competency_learning_objective_activities_path do |ac|
+  
+    %p= ac.label 'Omschrijving Activiteit'
+  
+    .dev
+      .sub
+        = ac.text_area :description,  :id => "message_area"
 
-= link_to 'Terug naar alle activiteiten', student_learning_objective_activities_path(@learning_objective)
+
+    .dev 
+      .sub
+        = ac.submit 'Bevestig', :class => 'submit_button'
+
+  
+  .under
+    = link_to 'Terug naar alle activiteiten', student_competency_learning_objective_activities_path

@@ -1,14 +1,29 @@
-%table
-  %tr
-    %th Naam
-    %th Competentie
-    %th Leerjaar
-    %th Semester
-    %th Behaald?
-  %tr
-    %td= @learning_objective.name
-    %td= @learning_objective.competency.name
-    %td= @learning_objective.academic_year
-    %td= @learning_objective.period
-    %td= @learning_objective.achieved
-= link_to 'Terug naar alle leerdoelen', student_learning_objectives_path
+#sections
+  .center
+    .center-top
+      leerdoel bekijken
+    
+    .center-content
+      %h2 Naam:
+      %p= @learning_objective.name
+
+    .center-content
+
+      %h2 Gekoppeld aan de competentie(s):
+      %p= @learning_objective.competency.name
+
+    .center-content
+      %h2 Gekoppeld aan periode:
+      %p 
+        Leerjaar 
+        = @learning_objective.academic_year
+      %p
+        Periode
+        = @learning_objective.period
+
+  
+      =link_to "Wijzig dit leerdoel", edit_student_competency_learning_objective_path, class: "center-button"
+
+      =link_to "Verwijder dit leerdoel", student_competency_learning_objective_path(@learning_objective.competency.id, @learning_objective.id), method: :delete, data: { confirm: 'Weet je het zeker?' }, class: "center-button"
+
+      =link_to "Venster sluiten", student_competency_learning_objectives_path, class: "center-button"

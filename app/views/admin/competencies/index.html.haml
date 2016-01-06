@@ -1,17 +1,22 @@
-Competenties
-%table
-  %tr
-    %th Naam Competentie
-    %th Competentie Omschrijving 
-    %th Competentie actief?
+#sections
+  %h2 Overzicht van competenties 
+
   - @competency.each do |co|
-    %tr
-      %td= co.name
-      %td= co.description
-      %td= co.active
-      %td= link_to 'Show', admin_competency_path(co)
-      %td= link_to 'Competentie aanpassen', edit_admin_competency_path(co)
-      %td= link_to 'Competentie verwijderen', admin_competency_path(co), method: :delete, data: { confirm: 'Weet je het zeker?' }
-= link_to 'Nieuw', new_admin_competency_path
-= link_to 'Log uit', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
+     
+    %li{class: "#{calculate_color(co.name)} competenties"}
+      %h2.name= co.name
+      .inside_block_up
+        = co.description 
+      .inside_block_mid 
+        Actief:
+        = co.active
+      .inside_block_down
+        = link_to 'Aanpassen', edit_admin_competency_path(co) 
+        |
+        = link_to 'Verwijderen', admin_competency_path(co), method: :delete, data: { confirm: 'Weet je het zeker?'}
+
+  .under
+    = link_to '+ Nieuwe competentie', new_admin_competency_path
+    |
+    = link_to 'Terug naar het Dashboard', admin_root_path
 
