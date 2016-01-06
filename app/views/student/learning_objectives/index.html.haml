@@ -6,7 +6,7 @@
 
 
       %h2.name
-        %h2= link_to  lo.name, student_competency_learning_objective_path(lo.competency.id, lo)
+        %h2= link_to lo.name, student_competency_learning_objective_path(lo.competency.id, lo)
 
       .lo_block
         = link_to 'Activiteiten', student_competency_learning_objective_activities_path(lo.competency.id, lo)

@@ -1,14 +1,14 @@
 #sections
-  %h2 Voeg bewijs toe aan je huidige activiteit
+  %h2 pas hier je bewijs aan
 
   = form_for @proof, url: student_competency_learning_objective_activity_proofs_path do |pr|
 
     .dev
-      = pr.label 'In welke sectie van het document of bestand valt het bewijs te vindenn?'
+      = pr.label 'Pas hier de sectie van het document of bestand waar het bewijs valt te vinden aan'
       .sub
         = pr.text_area :description
     .dev
-      = pr.label 'Waar valt dit document/bestand te vinden?'
+      = pr.label 'Pas hier de locatie waar het bestand of document te vinden valt aan'
       .sub
         = pr.text_area :reference
 

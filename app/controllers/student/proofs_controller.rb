@@ -18,6 +18,22 @@ class Student::ProofsController < ApplicationController
     end
   end
 
+  def edit
+    @proof = Proof.find(params[:id])
+  end
+
+  def update
+    @proof = Proof.find(params[:id])
+
+    if @proof.update(proof_params)
+
+      redirect_to student_competency_learning_objective_activity_proofs_path, notice: 'Leerdoel succesvol aangepast'
+
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def proof_params

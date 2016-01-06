@@ -2,7 +2,9 @@
   - @proofs.each do |pr|
     .overview 
       .overview_link
-        = pr.description
+        = link_to pr.description, student_competency_learning_objective_activity_proof_path(params[:learning_objective_id], params[:activity_id], pr.activity_id, id: pr.id)
 
   .under
     = link_to 'Nieuw bewijs toevoegen', new_student_competency_learning_objective_activity_proof_path
+    |
+    = link_to 'Terug naar alle activteiten', student_competency_learning_objective_activities_path
