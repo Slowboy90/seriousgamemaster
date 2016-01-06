@@ -1,0 +1,11 @@
+%h1 Geef je huidige activiteit context
+= form_for @context, url: student_competency_learning_objective_activity_contexts_path do |co|
+  %p
+    = co.label 'Omschrijving Context'
+    %br
+      = co.text_field :description
+ 
+  %p
+    = co.submit 'Bevestig'
+
+-# = link_to 'Terug naar alle activiteiten', student_competency_learning_objective_activities_path
