@@ -5,6 +5,12 @@ class Student::ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+    @context = Context.where(activity_id: @activity).first
+    if @context.nil?
+      @co = 'Er moet nog een context worden toegevoegd'
+    else
+      @co = @context.description
+    end
   end
 
   def new
@@ -40,12 +46,12 @@ class Student::ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
     @activity.destroy
     redirect_to student_competency_learning_objective_activities_path, notice: 'Activiteit succesvol verwijderd'
-end
+  end
 
   private
 
   def activity_params
     params.require(:activity)
-      .permit(:description, :learning_objective_id, :context_id)
+      .permit(:description, :learning_objective_id)
   end
 end
