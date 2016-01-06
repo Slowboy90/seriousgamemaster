@@ -1,17 +1,9 @@
-#sections
-  %h2 Snel naar...
-  =link_to "Leerdoel toevoegen", new_student_competency_learning_objective_path(@competency), class: "teacher-blocks"
-  
-  =link_to "Mijn profiel", new_student_competency_learning_objective_path(@competency), class: "teacher-blocks"
-  
-  = link_to 'Overzicht Studenten', teacher_students_path, class: "teacher-blocks"
-  = link_to 'Overzicht Docenten', teacher_teachers_path, class: "teacher-blocks"
-
-  %ul
-    %h2 Competenties
-    - @competency.each do |c|
-
-      = link_to student_competency_learning_objectives_path(c) do 
-        %li{class: "#{calculate_color(c.name)} competenties"}= c.name
-
-  
+Dashboard Student
+%table
+  %tr
+    %th Competentie
+  - @competency.each do |c|
+    %tr
+      %td= link_to c.name, student_competency_path(c)
+-# = link_to 'Nieuw', new_student_learning_objective_activity_path
+-# = link_to 'Terug naar Dashboard', student_root_path

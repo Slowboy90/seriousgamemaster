@@ -1,13 +1,11 @@
-#sections
-  %h2 Huidige activiteit aanpassen
-  = form_for @activity, url: student_competency_learning_objective_activity_path do |ac|
-    
-    .inside_block_up
-      = ac.label 'Omschrijving Activiteit'
-    .inside_block_mid
-      = ac.text_area :description, :id => "message_area"
-   
-    .inside_block_down
-      = ac.submit 'Bevestig', :class => 'submit_button'
-  .under
-    = link_to 'Terug naar activiteiten', student_competency_learning_objective_activities_path
+%h1 Huidige activiteit aanpassen
+= form_for @activity, url: student_learning_objective_activity_path do |ac|
+  %p
+    = ac.label 'Omschrijving Activiteit'
+    %br
+      = ac.text_field :description
+ 
+  %p
+    = ac.submit 'Bevestig'
+
+= link_to 'Terug naar alle activiteiten', student_learning_objective_activities_path(@learning_objective)

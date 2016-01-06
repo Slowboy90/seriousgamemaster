@@ -1,4 +1,4 @@
 # context model class
 class Context < ActiveRecord::Base
-  belongs_to :activity
+  has_one :activity
 end

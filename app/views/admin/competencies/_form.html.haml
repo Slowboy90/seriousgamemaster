@@ -1,20 +1,17 @@
-.caution
-  %p (!) Bij het aanmaken of aanpassen van een competentie geldt dat de naam van een competentie maximaal 30 karakters mag bevatten. Voor de omschrijving van de competentie geldt een maximum van 35 karakters.
-
 = form_for [:admin, @competency] do |co|
-  .dev
-    = co.label 'Naam competentie'
-    .sub
-      = co.text_area :name, :id => "message_box"
-  .dev
+  %p
+    = co.label 'Naam Competentie'
+    %br
+      = co.text_field :name
+  %p
     = co.label 'Omschrijving Competentie'
-    .sub
-      = co.text_area :description, :id => "message_area"
-  .dev
+    %br
+      = co.text_field :description
+  %p
     = co.label 'Is de competentie actief?'
-    .sub
+    %br
     
       = co.check_box :active, as: :boolean 
 
-  .under
-    = co.submit 'Bevestig', :class => 'submit_button' 
+  %p
+    = co.submit 'Bevestig'

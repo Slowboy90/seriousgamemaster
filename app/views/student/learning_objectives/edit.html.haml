@@ -1,29 +1,3 @@
-#sections
-  %h2 Leerdoel aanpassen
-  = form_for @learning_objective, url: student_competency_learning_objective_path do |lo|
-    .dev
-      = lo.label 'Omschrijving'
-      .sub
-        = lo.text_area :name, :id => "message_area"
-    
-    .dev
-      = lo.label 'Competentie'
-      .sub
-        = lo.collection_select(:competency_id, Competency.all, :id, :name)
-    
-    .dev
-      = lo.label 'Leerjaar'
-      .sub
-        = lo.number_field :academic_year, :class => "label_box"
-    
-    .dev
-      = lo.label 'Semester'
-      .sub
-        = lo.number_field :period, :class => "label_box"
-    
-    .dev
-      = lo.submit 'Bevestig', :class => 'submit_button' 
-  
-  .under
-    =link_to "Terug naar overzicht", student_competency_learning_objectives_path
-
+%h1 Leerdoel aanpassen
+= render 'form'
+= link_to 'Terug naar alle leerdoelen', student_learning_objectives_path
