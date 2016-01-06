@@ -1,0 +1,2 @@
+module Student::ProofsHelper
+end
