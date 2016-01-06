@@ -1,33 +1,6 @@
-#sections
-  .overview
-    .overview_link
-      %h2 Omschrijving activiteit
-      %p= @activity.description
-
-      = link_to 'Aanpassen', edit_student_competency_learning_objective_activity_path
-  
-      = link_to 'Verwijderen', student_competency_learning_objective_activity_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
-  .overview    
-    .overview_link
-      %h2 Omschrijving context
-      %p= @co
-
-      -if @context.nil?
-
-        = link_to 'Context toevoegen', new_student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity)
-     
-      -else @context.nil?
-        
-        = link_to 'Aanpassen', edit_student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context)
-        
-        = link_to 'Verwijderen', student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context), method: :delete, data: { confirm: 'Weet je het zeker?' }
-      
- 
-  .under
-    %P 
-      Terug naar:
-      = link_to 'Activiteiten bij leerdoel', student_competency_learning_objective_activities_path
-      |
-      = link_to "Leerdoeloverzicht", student_competency_learning_objectives_path
-      |
-      = link_to 'Dashboard', root_path
+%table
+  %tr
+    %th Omschrijving activiteit
+  %tr
+    %td= @activity.description
+= link_to 'Back', student_root_path

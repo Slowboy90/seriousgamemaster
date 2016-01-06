@@ -8,7 +8,7 @@ class PagesController < ApplicationController
       when 1
         redirect_to student_root_path
       when 2
-        redirect_to teacher_root_path
+        redirect_to student_root_path
       when 3
         redirect_to admin_root_path
       end
