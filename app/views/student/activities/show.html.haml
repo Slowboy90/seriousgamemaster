@@ -1,30 +1,33 @@
 #sections
-  %h2 Omschrijving activiteit
-  %p= @activity.description
-  %p= @co
-
-  .under
   .overview
     .overview_link
-      = link_to 'Activiteit aanpassen', edit_student_competency_learning_objective_activity_path
+      %h2 Omschrijving activiteit
+      %p= @activity.description
+
+      = link_to 'Aanpassen', edit_student_competency_learning_objective_activity_path
   
-  .under
-  .overview
+      = link_to 'Verwijderen', student_competency_learning_objective_activity_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
+  .overview    
     .overview_link
-      = link_to 'Activiteit verwijderen', student_competency_learning_objective_activity_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
+      %h2 Omschrijving context
+      %p= @co
 
-  .under
-  .overview
-    .overview_link
       -if @context.nil?
+
         = link_to 'Context toevoegen', new_student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity)
+     
       -else @context.nil?
-        = link_to 'Context aanpassen', edit_student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context)
-        = link_to 'Context verwijderen', student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context), method: :delete, data: { confirm: 'Weet je het zeker?' }
-  
+        
+        = link_to 'Aanpassen', edit_student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context)
+        
+        = link_to 'Verwijderen', student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context), method: :delete, data: { confirm: 'Weet je het zeker?' }
+      
+ 
   .under
-    = link_to 'Terug naar activiteiten bij huidig leerdoel', student_competency_learning_objective_activities_path
-    |
-    = link_to "Terug naar overzicht van je leerdoelen", student_competency_learning_objectives_path
-    |
-    = link_to 'Terug naar Dashboard', root_path
+    %P 
+      Terug naar:
+      = link_to 'Activiteiten bij leerdoel', student_competency_learning_objective_activities_path
+      |
+      = link_to "Leerdoeloverzicht", student_competency_learning_objectives_path
+      |
+      = link_to 'Dashboard', root_path

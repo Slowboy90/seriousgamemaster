@@ -1,3 +1,4 @@
+
 @media (min-width: 1155px) and (max-width: 10000px){
 
 /* LOG IN */	
@@ -29,15 +30,6 @@
 	max-width: 1200px;
 	margin-left:auto;
 	margin-right:auto;
-}
-
-._1{
-	background-color: #455A64;
-	width: 25%;
-	padding: 10px;
-	display: inline-block;
-	float: left;
-	border-radius: 5px;
 }
 
 ._2{
@@ -120,11 +112,16 @@
 
 /* BLOCKS COMPETENCY OVERVIEW*/
 .overview{
-	width:22%;
+	width:45%;
+	height: auto;
 	display:inline-block;
 	vertical-align:top;
 	padding: 10px;
 	text-align: center;
+}
+
+.overview_link{
+	height: 100px;
 }
 /* END BLOCKS COMPETENCY OVERVIEW*/
 
