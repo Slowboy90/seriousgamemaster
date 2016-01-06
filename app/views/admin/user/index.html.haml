@@ -1,49 +1,58 @@
+#sections
+  
+  .user_overview
+    %h2 Naam
+    .user_overview_inside    
+      - @student.each do |st|
+        = st.education_name  
+        =link_to "Bekijk profiel", student_root_path
 
-/ @student.each do |variable|
-/ 	variable.name
-/ end
-/ @teacher.each do |variable|
-/ 	variable.name
-/ end
-/ @admin.each do |variable|
-/ 	variable.name
-/ end
-Alle studenten
-%table
-  %tr
-    %th Student naam
-    %th Student email 
-  = @student.count
-  - @student.each do |st|
-    %tr
-      %td= st.education_name
-      %td= st.email
-      %td= @student.count
+  .user_overview
+    %h2 Functie
+    .user_overview_inside 
+      Student
+  .user_overview
+    %h2 Telefoonnummer
+    .user_overview_inside 
+      Tel nr. hier
+  .user_overview
+    %h2 E-mailadres
+    .user_overview_inside 
+      - @student.each do |st|
+        = st.email
+  %hr
 
+  .user_overview
+    .user_overview_inside    
+      - @teacher.each do |te|
+        = te.education_name
+        =link_to "Bekijk profiel", admin_user_index_path  
+  .user_overview
+    .user_overview_inside 
+      Docent
+  .user_overview
+    .user_overview_inside 
+      Tel nr. hier
+  .user_overview
+    .user_overview_inside 
+      - @teacher.each do |te|
+        = te.email
+  %hr
 
-Alle docenten
-%table
-  %tr
-    %th Docent naam
-    %th Docent email 
-  = @teacher.count
-  - @teacher.each do |te|
-    %tr
-      %td= te.education_name
-      %td= te.email
+  .user_overview
+    .user_overview_inside    
+      - @admin.each do |ad|
+        = ad.education_name  
+        =link_to "Bekijk profiel", admin_user_index_path
+  .user_overview
+    .user_overview_inside 
+      Admin
+  .user_overview
+    .user_overview_inside 
+      Tel nr. hier
+  .user_overview
+    .user_overview_inside 
+      - @admin.each do |ad|
+        = ad.email
 
-
-
-
-      Alle admins
-%table
-  %tr
-    %th Admin naam
-    %th Admin email 
-  = @admin.count
-  - @admin.each do |ad|
-    %tr
-      %td= ad.education_name
-      %td= ad.email
-
-= link_to 'Terug naar Admin Dashboard', admin_root_path
+  

@@ -1,0 +1,30 @@
+#sections
+  #devise-wrapper
+    .devise
+      .devise-top
+        %h1 Account aanmaken
+
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .under
+          = f.label :email
+          .dev
+          = f.email_field :email, autofocus: true, :class => "devise_label_box"
+          .dev
+            = f.label :password
+            - if @minimum_password_length
+              %em
+                (#{@minimum_password_length} characters minimum)
+          .dev
+          = f.password_field :password, autocomplete: "off", :class => "devise_label_box"
+          .dev
+            = f.label :password_confirmation
+          .dev
+          = f.password_field :password_confirmation, autocomplete: "off", :class => "devise_label_box"
+        
+        .center-content
+          = f.submit 'Aanmelden', :class => 'submit_button'
+        .center-devise
+          = render "devise/shared/links"
+
+

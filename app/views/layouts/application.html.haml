@@ -6,20 +6,22 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    %link{:href => "desktop.css", :media => "screen and (min-width: 801px)", :rel => "stylesheet"}/
-    %link{:href => "mobile-style.css", :media => "screen and (min-width: 100px) and (max-width: 799px)", :rel => "stylesheet"}/
     
     %meta{:charset => "utf-8"}
     %meta{:content => "width=device-width, initial-scale=1.0, user-scalable=yes", :name => "viewport"}/
-    
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", :rel => "stylesheet"}/
   %body
-    #wrapper
-    .button-wrapper
+    .button_wrapper
       .wrapper-items
-        ._1
-          %h1 searchform
+        .box
+          .container-1
+            %span.icon
+              %i.fa.fa-search
+            %input#search{:placeholder => "Zoeken naar personen...", :type => "search"}/
+          
+
         ._2
-          =link_to "LearnWeb", student_root_path, class: "home"
+          =link_to "LearnWeb", root_path, class: "home"
 
         ._3
           - if user_signed_in?
@@ -27,12 +29,14 @@
               %h1 Ingelogd als: #{current_user.education_name}
         ._4
           %a{"data-confirm" => "Weet je het zeker?", "data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} Log uit
+    
     #top
       .top-items
-        %h1 Mijn dashboard
+        %h1 Mijn LearnWeb
     - flash.each do |name, msg|
       = content_tag :div, msg, class: name
-    = yield
+    #wrapper
+      = yield
 
 
 

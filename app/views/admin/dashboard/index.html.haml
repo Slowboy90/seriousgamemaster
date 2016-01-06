@@ -1,12 +1,10 @@
-Dashboard Admin 
-%br 
-= link_to 'Alle competenties', admin_competencies_path
-%br
-= link_to 'Competentie aanmaken', new_admin_competency_path
-%br
-= link_to 'Nieuwe gebruiker aanmaken', new_user_registration_path
-%br
-= link_to 'Alle gebruikers', admin_user_index_path
-%br
-= link_to 'Log uit', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
-%br
+#sections
+  %h2 Bekijk overzichten
+  =link_to "Gebruikersoverzicht", admin_user_index_path, class: "teacher-blocks"
+  =link_to "Competentieoverzicht", admin_competencies_path, class: "teacher-blocks"
+  =link_to "Bekijk mijn profiel", admin_root_path, class: "teacher-blocks"
+
+
+  %h2 Voeg nieuwe items toe
+  =link_to "Een nieuwe competentie", new_admin_competency_path, class: "teacher-blocks"
+  =link_to "Een nieuwe gebruiker", new_user_registration_path, class: "teacher-blocks"

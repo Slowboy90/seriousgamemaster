@@ -1,11 +1,26 @@
-Alle docenten
-%table
-  %tr
-    %th Docent naam
-    %th Docent email 
-  = @teacher.count
-  - @teacher.each do |te|
-    %tr
-      %td= te.education_name
-      %td= te.email
-= link_to 'Terug naar dashboard', teacher_root_path
+#sections
+  
+  .user_overview
+    %h2 Naam
+    .user_overview_inside    
+      - @teacher.each do |te|
+        = te.education_name
+        =link_to "Bekijk profiel", admin_user_index_path  
+
+  .user_overview
+    %h2 Functie
+    .user_overview_inside 
+      Docent
+  .user_overview
+    %h2 Telefoonnummer
+    .user_overview_inside 
+      Tel nr. hier
+  .user_overview
+    %h2 E-mailadres
+    .user_overview_inside 
+      - @teacher.each do |te|
+        = te.email
+  %hr
+
+  .under
+    = link_to 'Terug naar dashboard', root_path

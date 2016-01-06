@@ -1,22 +1,28 @@
-%h1 Nieuw leerdoel
-= form_for [:student, :competency, @learning_objective]  do |lo|
-  %p
-    = lo.label 'Omschrijving'
-    %br
-      = lo.text_field :name
-  %p
-    = lo.label 'Competentie'
-    %br
-      = lo.collection_select(:competency_id, Competency.all, :id, :name)
-  %p
-    = lo.label 'Leerjaar'
-    %br
-      = lo.number_field :academic_year
-  %p
-    = lo.label 'Semester'
-    %br
-      = lo.number_field :period
-  %p
-    = lo.submit 'Bevestig' 
+#sections
+  %h2 Nieuw leerdoel
+  = form_for [:student, :competency, @learning_objective]  do |lo|
+    
+    .dev
+      = lo.label 'Omschrijving'
+      .sub
+        = lo.text_area :name, :id => "message_area"
+    .dev
+      = lo.label 'Competentie'
+      .sub
+        = lo.collection_select :competency_id, Competency.all, :id, :name, class: "label_box" 
+    .dev
+      = lo.label 'Leerjaar'
+      .sub
+        = lo.number_field :academic_year, :class => "label_box"
+    .dev
+      = lo.label 'Semester'
+      .sub
+        = lo.number_field :period, :class => "label_box"
+    .dev 
+      = lo.submit 'Bevestig', :class => 'submit_button'
 
-= link_to 'Terug', student_root_path
+  .under
+    = link_to 'Terug naar Dashboard', student_root_path
+
+
+    

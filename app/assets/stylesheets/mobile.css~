@@ -1,3 +1,4 @@
+
 @media (min-width: 200px) and (max-width: 567px) {
 
 /* LOG IN MOBILE */
@@ -41,6 +42,15 @@
     width: 95%;
     padding: 0px;
     margin: auto;
+}
+
+._1{
+    background-color: #455A64;
+    width: auto;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
 }
 
 ._2{
@@ -192,9 +202,6 @@ display: none;
     border-width: 1px;
     border-color: gray;
 }
-.overview_link{
-    height: 100px;
-}
 /* END BLOCKS ACTIVITY OVERVIEW*/
 
 
@@ -246,4 +253,3 @@ textarea#message_box {
     width: 97%;
 }
 /* END FORMS MOBILE*/
-
