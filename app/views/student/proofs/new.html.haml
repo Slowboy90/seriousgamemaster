@@ -1,0 +1,21 @@
+#sections
+  %h2 Voeg bewijs toe aan je huidige activiteit
+
+  = form_for @proof, url: student_competency_learning_objective_activity_proofs_path do |pr|
+
+    .dev
+      = pr.label 'In welke sectie van het document of bestand valt het bewijs te vindenn?'
+      .sub
+        = pr.text_area :description
+    .dev
+      = pr.label 'Waar valt dit document/bestand te vinden?'
+      .sub
+        = pr.text_area :reference
+
+   
+    .under
+      = pr.submit 'Bevestig', :class => 'submit_button' 
+
+  .under
+    = link_to 'Terug naar alle activiteiten', student_competency_learning_objective_activities_path
+
