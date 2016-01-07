@@ -32,6 +32,7 @@ Rails.application.routes.draw do
         resources :learning_objectives do
           resources :activities do
             resources :contexts
+            resources :proofs
           end
         end
       end

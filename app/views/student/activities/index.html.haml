@@ -12,6 +12,8 @@
         = puts "learning_objective_id: #{params[:learning_objective_id]}"
         
         %p= link_to 'Meer informatie', student_competency_learning_objective_activity_path(learning_objective_id: params[:learning_objective_id], id: ac.id)
+
+        %p= link_to 'Bewijs bij activiteit', student_competency_learning_objective_activity_proofs_path(params[:competency_id], params[:learning_objective_id], ac.id)
         
   
   .overview
