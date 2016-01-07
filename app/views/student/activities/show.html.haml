@@ -5,7 +5,7 @@
       %p= @activity.description
 
       = link_to 'Aanpassen', edit_student_competency_learning_objective_activity_path
-  
+      |
       = link_to 'Verwijderen', student_competency_learning_objective_activity_path, method: :delete, data: { confirm: 'Weet je het zeker?' }
   .overview    
     .overview_link
@@ -19,7 +19,7 @@
       -else @context.nil?
         
         = link_to 'Aanpassen', edit_student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context)
-        
+        |
         = link_to 'Verwijderen', student_competency_learning_objective_activity_context_path(params[:competency_id], @activity.learning_objective, @activity, @context), method: :delete, data: { confirm: 'Weet je het zeker?' }
       
  
