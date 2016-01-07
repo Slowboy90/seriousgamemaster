@@ -1,12 +1,28 @@
-Activiteiten
-%table
-  %tr
-    %th Beschrijving 
+#sections
+  %h2 Activiteit bekijken
+
   - @activity.each do |ac|
-    %tr
-      %td= ac.description
-      %td= link_to 'Show', student_learning_objective_activity_path(ac.learning_objective, ac)
-      %td= link_to 'Activiteit aanpassen', edit_student_learning_objective_activity_path(ac.learning_objective, ac)
-      %td= link_to 'Activiteit verwijderen', student_learning_objective_activity_path(ac.learning_objective, ac), method: :delete, data: { confirm: 'Weet je het zeker?' }
-= link_to 'Nieuw', new_student_learning_objective_activity_path
-= link_to 'Terug naar Dashboard', student_root_path
+  
+    .overview
+      .overview_link
+        %h2 Activiteit:
+        %p= ac.description
+
+        = puts "competecy id: #{params[:competency_id]}"
+        = puts "learning_objective_id: #{params[:learning_objective_id]}"
+        
+        %p= link_to 'Meer informatie', student_competency_learning_objective_activity_path(learning_objective_id: params[:learning_objective_id], id: ac.id)
+
+        %p= link_to 'Bewijs bij activiteit', student_competency_learning_objective_activity_proofs_path(params[:competency_id], params[:learning_objective_id], ac.id)
+        
+  
+  .overview
+    .overview_link
+      = link_to '+ Nieuwe activiteit', new_student_competency_learning_objective_activity_path
+      
+  .under
+  =link_to "Terug naar overzicht", student_competency_learning_objectives_path
+  |
+  = link_to 'Terug naar Dashboard', student_root_path
+
+

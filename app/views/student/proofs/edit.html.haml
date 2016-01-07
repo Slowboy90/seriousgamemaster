@@ -1,0 +1,21 @@
+#sections
+  %h2 pas hier je bewijs aan
+
+  = form_for @proof, url: student_competency_learning_objective_activity_proof_path do |pr|
+
+    .dev
+      = pr.label 'Pas hier de sectie van het document of bestand waar het bewijs valt te vinden aan'
+      .sub
+        = pr.text_area :description
+    .dev
+      = pr.label 'Pas hier de locatie waar het bestand of document te vinden valt aan'
+      .sub
+        = pr.text_area :reference
+
+   
+    .under
+      = pr.submit 'Bevestig', :class => 'submit_button' 
+
+  .under
+    = link_to 'Terug naar al het bewijs', student_competency_learning_objective_activity_proofs_path
+
