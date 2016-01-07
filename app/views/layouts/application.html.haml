@@ -13,12 +13,11 @@
   %body
     .button_wrapper
       .wrapper-items
-        .box
-          .container-1
-            %span.icon
+        ._1
+          .container
+            %form#search{:action => "/search", :method => "get"}
+              %input{:name => "q", :placeholder => "Zoeken naar personen...", :size => "40", :type => "text"}/
               %i.fa.fa-search
-            %input#search{:placeholder => "Zoeken naar personen...", :type => "search"}/
-          
 
         ._2
           =link_to "LearnWeb", root_path, class: "home"

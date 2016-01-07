@@ -1,58 +1,91 @@
 #sections
-  
+  //Admins//
   .user_overview
     %h2 Naam
     .user_overview_inside    
-      - @student.each do |st|
-        = st.education_name  
-        =link_to "Bekijk profiel", student_root_path
+      - @admin.each do |ad|
+        %p
+          = ad.education_name  
+        %hr
+
+  .user_overview_mob
+    %h2 E-mailadres
+    .user_overview_inside 
+      - @admin.each do |ad|
+        %p
+          = ad.email
+        %hr
 
   .user_overview
     %h2 Functie
     .user_overview_inside 
-      Student
+    - @admin.each do |ad|
+      %p Admin
+      %hr
+
   .user_overview
-    %h2 Telefoonnummer
+    %h2 Profielen
     .user_overview_inside 
-      Tel nr. hier
+    - @admin.each do |ad|
+      %p
+        =link_to "Bekijk profiel", admin_user_index_path 
+      %hr
+
+  //Teachers//
   .user_overview
-    %h2 E-mailadres
+    .user_overview_inside    
+      - @teacher.each do |te|
+        %p
+          = te.education_name
+        %hr
+
+  .user_overview_mob
+    .user_overview_inside 
+      - @teacher.each do |te|
+        %p
+          = te.email
+        %hr
+  .user_overview
+    .user_overview_inside 
+    - @teacher.each do |te|
+      %p Docent
+      %hr
+
+  .user_overview
+    .user_overview_inside 
+    - @teacher.each do |te|
+      %p
+        =link_to "Bekijk profiel", admin_user_index_path 
+      %hr
+
+
+  //Students//
+  .user_overview
+    .user_overview_inside    
+      - @student.each do |st|
+        %p
+          = st.education_name  
+        %hr
+
+  .user_overview_mob
     .user_overview_inside 
       - @student.each do |st|
-        = st.email
-  %hr
+        %p
+          = st.email
+        %hr
 
   .user_overview
-    .user_overview_inside    
-      - @teacher.each do |te|
-        = te.education_name
-        =link_to "Bekijk profiel", admin_user_index_path  
-  .user_overview
     .user_overview_inside 
-      Docent
-  .user_overview
-    .user_overview_inside 
-      Tel nr. hier
-  .user_overview
-    .user_overview_inside 
-      - @teacher.each do |te|
-        = te.email
-  %hr
+    - @student.each do |st|
+      %p Student
+      %hr
 
   .user_overview
-    .user_overview_inside    
-      - @admin.each do |ad|
-        = ad.education_name  
-        =link_to "Bekijk profiel", admin_user_index_path
-  .user_overview
     .user_overview_inside 
-      Admin
-  .user_overview
-    .user_overview_inside 
-      Tel nr. hier
-  .user_overview
-    .user_overview_inside 
-      - @admin.each do |ad|
-        = ad.email
+    - @student.each do |st|
+      %p
+        =link_to "Bekijk profiel", admin_user_index_path 
+      %hr
 
-  
+  .under
+    = link_to 'Terug naar dashboard', root_path
