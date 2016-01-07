@@ -4,23 +4,32 @@
     %h2 Naam
     .user_overview_inside    
       - @student.each do |st|
-        = st.education_name  
-        =link_to "Bekijk profiel", student_root_path
+        %p
+          = st.education_name  
+        %hr
+
+  .user_overview_mob
+    %h2 E-mailadres
+    .user_overview_inside 
+      - @student.each do |st|
+        %p
+          = st.email
+        %hr
 
   .user_overview
     %h2 Functie
     .user_overview_inside 
-      Student
+    - @student.each do |st|
+      %p Student
+      %hr
+
   .user_overview
-    %h2 Telefoonnummer
+    %h2 Profielen
     .user_overview_inside 
-      Tel nr. hier
-  .user_overview
-    %h2 E-mailadres
-    .user_overview_inside 
-      - @student.each do |st|
-        = st.email
-  %hr
+    - @student.each do |st|
+      %p
+        =link_to "Bekijk profiel", admin_user_index_path 
+      %hr
 
   .under
     = link_to 'Terug naar dashboard', root_path
