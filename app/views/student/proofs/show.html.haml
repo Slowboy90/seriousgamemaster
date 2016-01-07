@@ -1,0 +1,12 @@
+#sections
+  .overview
+    .overview_link
+      %h2 Sectie waar de bewijslast te vinden is:
+      %p= @proof.description
+
+      Link waar dit document of bestand te vinden valt:
+      %p= link_to 'website', @proof.reference
+
+      = link_to 'Aanpassen', edit_student_competency_learning_objective_activity_proof_path
+      |
+      = link_to 'Verwijderen', student_competency_learning_objective_activity_proof_path, method: :delete, data: { confirm: 'Weet je het zeker?' }

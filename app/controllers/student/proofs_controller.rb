@@ -3,6 +3,10 @@ class Student::ProofsController < ApplicationController
     @proofs = Activity.find(params[:activity_id]).proofs.all
   end
 
+  def show
+    @proof = Proof.find(params[:id])
+  end
+
   def new
     @proof = Proof.new
   end
@@ -12,7 +16,8 @@ class Student::ProofsController < ApplicationController
     @proof.activity_id = params[:activity_id]
 
     if @proof.save
-      redirect_to  student_competency_learning_objective_activity_proofs_path
+      redirect_to  student_competency_learning_objective_activity_proofs_path, notice: 'Bewijs succesvol aangemaakt'
+
     else
       render 'new'
     end
@@ -27,13 +32,19 @@ class Student::ProofsController < ApplicationController
 
     if @proof.update(proof_params)
 
-      redirect_to student_competency_learning_objective_activity_proofs_path, notice: 'Leerdoel succesvol aangepast'
+      redirect_to student_competency_learning_objective_activity_proofs_path, notice: 'Bewijs succesvol aangepast'
 
     else
       render 'edit'
     end
   end
 
+  def destroy
+    @proof = Proof.find(params[:id])
+    @proof.destroy
+
+    redirect_to student_competency_learning_objective_activity_proofs_path, notice: 'Bewijs succesvol verwijderd'
+  end
   private
 
   def proof_params
