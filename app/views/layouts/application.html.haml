@@ -11,24 +11,27 @@
     %meta{:content => "width=device-width, initial-scale=1.0, user-scalable=yes", :name => "viewport"}/
     %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", :rel => "stylesheet"}/
   %body
-    .button_wrapper
-      .wrapper-items
-        ._1
-          .container
-            %form#search{:action => "/search", :method => "get"}
-              %input{:name => "q", :placeholder => "Zoeken naar personen...", :size => "40", :type => "text"}/
-              %i.fa.fa-search
+    - if user_signed_in?
+      .button_wrapper
+        - if user_signed_in?
+          .wrapper-items
+            ._1
+              .container
+                %form#search{:action => "/admin/user", :method => "get"}
+                  %input{:name => "", :placeholder => "Zoeken naar personen...", :size => "40", :type => "text"}
+                    %i.fa.fa-search
+            ._2
+              =link_to "LearnWeb", root_path, class: "home"
 
-        ._2
-          =link_to "LearnWeb", root_path, class: "home"
+            ._3 
+              %div
+                %h1 Ingelogd als: #{current_user.education_name}
+            ._4
+              %a{"data-confirm" => "Weet je het zeker?", "data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} Log uit
+        
 
-        ._3
-          - if user_signed_in?
-            %div
-              %h1 Ingelogd als: #{current_user.education_name}
-        ._4
-          %a{"data-confirm" => "Weet je het zeker?", "data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} Log uit
-    
+
+
     #top
       .top-items
         %h1 Mijn LearnWeb
@@ -36,6 +39,3 @@
       = content_tag :div, msg, class: name
     #wrapper
       = yield
-
-
-
