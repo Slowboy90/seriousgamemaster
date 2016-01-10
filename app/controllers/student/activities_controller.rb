@@ -1,3 +1,4 @@
+# class activity
 class Student::ActivitiesController < ApplicationController
   def index
     @activity = LearningObjective.find(params[:learning_objective_id]).activities.all
