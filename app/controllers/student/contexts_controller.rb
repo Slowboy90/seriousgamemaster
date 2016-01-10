@@ -10,7 +10,9 @@ class Student::ContextsController < ApplicationController
     if @context.save
       @context.activity_id = params[:activity_id]
       @context.save
-      redirect_to student_competency_learning_objective_activity_path(params[:competency_id], params[:learning_objective_id], params[:activity_id]), notice:  'Context succesvol toegevoegd!'
+      redirect_to student_competency_learning_objective_activity_path(
+        params[:competency_id], params[:learning_objective_id],
+        params[:activity_id]), notice:  'Context succesvol toegevoegd!'
     else
       render 'new'
     end
@@ -24,7 +26,9 @@ class Student::ContextsController < ApplicationController
     @context = Context.find(params[:id])
 
     if @context.update(context_params)
-      redirect_to student_competency_learning_objective_activity_path(params[:competency_id], params[:learning_objective_id], params[:activity_id]), notice: 'Context succesvol aangepast'
+      redirect_to student_competency_learning_objective_activity_path(
+        params[:competency_id], params[:learning_objective_id],
+        params[:activity_id]), notice: 'Context succesvol aangepast'
     else
       render 'edit'
     end
@@ -33,7 +37,9 @@ class Student::ContextsController < ApplicationController
   def destroy
     @context = Context.find(params[:id])
     @context.destroy
-    redirect_to student_competency_learning_objective_activity_path(params[:competency_id], params[:learning_objective_id], params[:activity_id]), notice: 'Activiteit succesvol verwijderd'
+    redirect_to student_competency_learning_objective_activity_path(
+      params[:competency_id], params[:learning_objective_id],
+      params[:activity_id]), notice: 'Activiteit succesvol verwijderd'
   end
 
   private
