@@ -1,6 +1,6 @@
+# class user
 class Teacher::UserController < ApplicationController
   def index
-    
   end
 
   def students
@@ -11,4 +11,3 @@ class Teacher::UserController < ApplicationController
     @teacher = User.where('usertype = 2')
   end
 end
-

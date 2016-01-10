@@ -1,3 +1,4 @@
+# class proof
 class Student::ProofsController < ApplicationController
   def index
     @proofs = Activity.find(params[:activity_id]).proofs.all
@@ -16,7 +17,7 @@ class Student::ProofsController < ApplicationController
     @proof.activity_id = params[:activity_id]
 
     if @proof.save
-      redirect_to  student_competency_learning_objective_activity_proofs_path, notice: 'Bewijs succesvol aangemaakt'
+      redirect_to student_competency_learning_objective_activity_proofs_path, notice: 'Bewijs succesvol aangemaakt'
 
     else
       render 'new'
@@ -45,6 +46,7 @@ class Student::ProofsController < ApplicationController
 
     redirect_to student_competency_learning_objective_activity_proofs_path, notice: 'Bewijs succesvol verwijderd'
   end
+
   private
 
   def proof_params

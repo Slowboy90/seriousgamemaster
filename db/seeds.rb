@@ -8,24 +8,21 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-
-#Studenten
+# Studenten
 student1 = User.create(email: 'kraa1400@nhl.nl', password: '1234567890', usertype: 1, education_name: 'Bruno vd Kraan', education_number: 1)
 student2 = User.create(email: 'slot1400@nhl.nl', password: '1234567890', usertype: 1, education_name: 'Coen Slot', education_number: 1)
 student3 = User.create(email: 'lepp1400@nhl.nl', password: '1234567890', usertype: 1, education_name: 'Jorik Leppink', education_number: 1)
 student4 = User.create(email: 'trak1400@nhl.nl', password: '1234567890', usertype: 1, education_name: 'Maikel Traksel', education_number: 1)
 student5 = User.create(email: 'huis1400@nhl.nl', password: '1234567890', usertype: 1, education_name: 'Marrick Huisma', education_number: 1)
 
-
-#Docenten
+# Docenten
 teacher1 = User.create(email: 'docent1@nhl.nl', password: '1234567890', usertype: 2, education_name: 'Docent 1', education_number: 2)
 teacher2 = User.create(email: 'docent2@nhl.nl', password: '1234567890', usertype: 2, education_name: 'Docent 2', education_number: 2)
 teacher3 = User.create(email: 'docent3@nhl.nl', password: '1234567890', usertype: 2, education_name: 'Docent 3', education_number: 2)
 teacher4 = User.create(email: 'docent4@nhl.nl', password: '1234567890', usertype: 2, education_name: 'Docent 4', education_number: 2)
 teacher5 = User.create(email: 'docent5@nhl.nl', password: '1234567890', usertype: 2, education_name: 'Docent 5', education_number: 2)
 
-#Admins 
+# Admins
 admin1 = User.create(email: 'admin1@nhl.nl', password: '1234567890', usertype: 3, education_name: 'Admin 1 Learnweb', education_number: 3)
 admin2 = User.create(email: 'admin2@nhl.nl', password: '1234567890', usertype: 3, education_name: 'Admin 2 Learnweb ', education_number: 3)
 admin3 = User.create(email: 'admin3@nhl.nl', password: '1234567890', usertype: 3, education_name: 'Admin 3 Learnweb', education_number: 3)
