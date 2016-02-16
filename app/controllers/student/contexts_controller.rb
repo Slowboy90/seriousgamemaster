@@ -1,5 +1,8 @@
 class Student::ContextsController < ApplicationController
 
+  def index 
+
+    
   def new
     @context = Context.new
   end
